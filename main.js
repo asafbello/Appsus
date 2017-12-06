@@ -18,6 +18,10 @@ new Vue({
         </section>
     `,
 
+
+
+
+    
     router: myRouter,
     methods: {
                
