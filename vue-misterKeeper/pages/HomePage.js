@@ -6,11 +6,8 @@ export default {
         <section class="note-section">
           
             <h1>My notes</h1>
-            
-            
-
-            <router-link :to="'/details/' + note.id" v-for="note in notes" class="noteCard" :key="note.id">
-            <div class="card">
+            <router-link :to="'/MrKeeper/details/' + note.id" v-for="note in notes" class="noteCard" :key="note.id">
+            <div class="card noteCard">
             <header class="card-header">
               <p class="card-header-title">
               {{note.title}}
@@ -31,9 +28,10 @@ export default {
             </div>
             <footer class="card-footer">
               
-            <router-link :to="'/details/' + note.id + '/edit'" class="card-footer-item">Edit</router-link>
+            <router-link :to="'/MrKeeper/details/' + note.id + '/edit'" class="card-footer-item">Edit</router-link>
             
               <a href="#" class="card-footer-item" @click="deleteNote(note.id)">Delete</a>
+              
             </footer>
           </div>
              </router-link> 
@@ -68,6 +66,7 @@ export default {
                     .then(_ => {
                         // var userMsg = {txt: `Car ${carId} was succesfuly deleted`, type: 'success' }
                         // this.showUserMsg(userMsg);
+                        
                     })
                     .catch(err => {
                         // var userMsg = {txt: 'Car Delete Failed!', type: 'danger' }

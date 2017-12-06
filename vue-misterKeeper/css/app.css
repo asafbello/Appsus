@@ -1,8 +1,13 @@
+
+body {
+    background: lightblue;
+}
+
 .noteCard {
 border: 1px solid black;
 background: lightblue;
-max-width: 15%;
-
+max-width: 15% !important;
+background: yellow;
 }
 
 .note-section {
@@ -25,3 +30,9 @@ max-width: 15%;
     max-width: 100%;
     min-width: 70px; 
 }
+
+.hero {
+    margin-top: 20px;
+}
+
+

@@ -1,14 +1,28 @@
 import NoteService from '../services/NoteService.js'
+import HomePage from './HomePage.js'
 
 export default {
     template: `
-        <section v-if="note">
-        <router-link :to="'/MrKeeper/details/' + note.id + '/edit'">Edit</router-link>
-            <h1>{{note.title}}</h1>
-            <h2> {{note.txt}}</h2>
-            <h4>{{note.dateOfCreation}}</h4>
-            
+        <section v-if="note" class="noteCard">
+
+            <section class="hero is-warning">
+            <div class="hero-body">
+              <div class="container">
+                <h1 class="title">
+                {{note.title}}
+                </h1>
+                <h2 class="subtitle">
+                {{note.txt}} <br>
+                <h4>Created at: {{convertTime(note.dateOfCreation)}}</h4>
+        <router-link :to="'/MrKeeper/details/' + note.id + '/edit'" class="button is-warning">Edit</router-link>
+        
+                </h2>
+              </div>
+            </div>
+          </section>
+          
         </section>
+
     `,
     data() {
         return {
@@ -26,5 +40,14 @@ export default {
         //      this.$router.push('/')
         //  })
         
-    }
+    },
+     methods: {
+          
+             convertTime: (timeStamp) => {
+                return new Date(timeStamp)
+             }
+
+             
+         
+     }
 }
