@@ -20,8 +20,6 @@ new Vue({
 
     router: myRouter,
     methods: {
-            
-
-        
+               
     },
 }).$mount('#app')
