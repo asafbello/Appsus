@@ -1,10 +1,10 @@
-
+// import HomePage from '../HomePage.js'
 
 var notes = [
     {
         id: 101,
         title: 'not important',
-        txt: 'secret pass a1secret',
+        txt: 'secret pass a1secret food and ps4 game food and ps4 game food and ps4 game food and ps4 game food and ps4 game',
         img: null,
         color: 'red',
         priority: 'd',
@@ -13,7 +13,7 @@ var notes = [
     {
         id: 102,
         title: 'default',
-        txt: 'food and ps4 games',
+        txt: 'food and ps4 gamesfood and ps4 game food and ps4 game food and ps4 game food and ps4 game food and ps4 game',
         img: null,
         color: 'red',
         priority: 'c',
@@ -21,7 +21,7 @@ var notes = [
     },
     {
         id: 55,
-        title: 'pretty important',
+        title: 'pretty importantfood and ps4 game food and ps4 game',
         txt: 'just checking',
         img: null,
         color: 'red',
@@ -31,7 +31,7 @@ var notes = [
     {
         id: 12,
         title: 'very important',
-        txt: 'lorem bla bla bla',
+        txt: 'lorem bla bla bla food and ps4 game food and ps4 game food and ps4 game food and ps4 game',
         img: null,
         color: 'red',
         priority: 'a',
@@ -65,7 +65,13 @@ function sortByDate() {
 }
 
 function emptyNote() {
-    return { title: '', txt: '', dateOfCreation: Date.now(), priority:''}
+    return { title: '', txt: '', dateOfCreation: Date.now(), priority: '', color: null }
+}
+
+function getColor(priority) {
+    switch (priority) {
+
+    }
 }
 
 function _getNextId() {
@@ -120,5 +126,6 @@ export default {
     emptyNote,
     getNoteById,
     sortByPriority,
-    sortByDate
+    sortByDate,
+    getColor
 }

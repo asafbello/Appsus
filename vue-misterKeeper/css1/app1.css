@@ -1,0 +1,60 @@
+.hero {
+    margin: 20px;
+    /* max-width: 30%; */
+    border-radius: 20px; 
+}
+
+
+
+hr.line7 {
+    border-top: 1px solid #8c8b8b;
+    border-bottom: 1px solid black;
+}
+
+.main-container {
+    background-image: url("../img/pattern.jpg");
+    
+}
+
+.edit {
+    margin-top:25px;
+    float: right;
+    margin-left: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    max-width: 100vw;
+    padding: 15px;
+    justify-content: flex-start;
+    margin: auto;
+    width: auto;
+}
+
+.container {
+    width: auto;
+}
+
+.red {
+    background: red;
+}
+
+.card {
+    background: lightyellow;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.note-section {
+    display: flex;
+    height: 100vw;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+}
+
+
+

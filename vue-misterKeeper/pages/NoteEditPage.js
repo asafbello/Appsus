@@ -19,6 +19,8 @@ export default {
             <option value="d">Not important</option>
         </select> <br>
             <button>{{(noteId)? 'Save' : 'Add'}}</button>
+            <router-link tag="button" to="/MrKeeper">Cancel</router-link>
+            
         </form>
     </section>
     
@@ -34,14 +36,16 @@ export default {
         if (!this.noteId) return;
         console.log('asafff ,', this.noteId)
         NoteService.getNoteById(this.noteId)
-            .then(note => this.NoteToUpdate = note)
+            .then(note =>
+                 this.NoteToUpdate = Object.assign({}, note))
 
     },
     methods: {
         saveNote() {
+            // this.NoteToUpdate.color = NoteService.getColor(this.NoteToUpdate.priority)
             NoteService.saveNote(this.NoteToUpdate)
                 .then(addedNote => {
-                    this.$router.push('/')
+                    this.$router.push('/MrKeeper')
                 })
                 .catch(err => {
                 })
