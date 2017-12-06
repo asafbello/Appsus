@@ -1,5 +1,6 @@
 'use strict'
-
+import myRoutes from './routes.js'
+import miskipper from './vue-misterKeeper/main.js'
 
 Vue.use(VueRouter);
 const myRouter = new VueRouter({ routes: myRoutes })
@@ -9,10 +10,8 @@ new Vue({
         <section>
                 <h1>My App</h1> 
                 <nav>
-                    <router-link to="/" exact class="button is-dark">Home </router-link>
-                    <router-link to="/note/create" class="button is-warning">Add</router-link>                    
-                    <button class="button is-warning" @click="sortPrioority">Sort by priority</button>
-                    <button class="button is-warning" @click="sortByDate">Sort newest</button>
+                <router-link to="/" exact class="button is-dark">home </router-link>
+                    <router-link to="/MrKeeper" exact class="button is-dark">mr keeper </router-link>
                 </nav>
                 <router-view></router-view>
         </section>
@@ -26,4 +25,7 @@ new Vue({
     methods: {
                
     },
+    components: {
+        miskipper
+    }
 }).$mount('#app')

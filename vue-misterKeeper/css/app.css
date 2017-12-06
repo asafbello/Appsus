@@ -1,0 +1,27 @@
+.noteCard {
+border: 1px solid black;
+background: lightblue;
+max-width: 15%;
+
+}
+
+.note-section {
+    display: flex;
+    flex-flow: column ;
+    margin: 15px;
+    justify-content: space-around;
+    /* max-width: 85%; */
+}
+
+.btn {
+  
+    max-height: 10%;
+    max-width: 100%;
+  
+}
+
+.is-warning {
+    max-height: 10%;
+    max-width: 100%;
+    min-width: 70px; 
+}
