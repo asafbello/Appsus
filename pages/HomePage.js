@@ -7,7 +7,7 @@ export default {
           
             <h1>My notes</h1>
             
-     
+     </section>
     
     `,
     data() {
