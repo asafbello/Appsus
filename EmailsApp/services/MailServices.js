@@ -1,5 +1,5 @@
 
-
+var mailsCopy = [];
 var mails = [
     {
         id: 101,
@@ -38,6 +38,12 @@ function getMails() {
     });
 }
 
+function getCopyMails() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => { resolve(mailsCopy) }, 500)
+    });
+}
+
 function getmailById(mailId) {
     return new Promise((resolve, reject) => {
         var foundMail = mails.find(mail => mail.id === mailId)
@@ -45,6 +51,24 @@ function getmailById(mailId) {
         else reject();
     })
 }
+
+function deleteMail(mailId) {
+    return new Promise((resolve, reject) => {
+        var mailIdx = mails.findIndex(mail => mail.id === mailId)
+        mails.splice(mailIdx, 1);
+        resolve()
+    });
+}
+
+function sortUnread () {
+    mailsCopy = mails;
+    mailsCopy = mailsCopy.filter(mail => !mail.isRead)
+}
+
+function sortRead () {
+    mailsCopy = mails;
+    mailsCopy = mailsCopy.filter(mail => mail.isRead)
+ }
 
 
 
@@ -54,6 +78,10 @@ function getmailById(mailId) {
 
 export default {
     getMails,
-    getmailById
-    
+    getmailById,
+    deleteMail,
+    sortUnread,
+    sortRead,
+    getCopyMails
+
 }
