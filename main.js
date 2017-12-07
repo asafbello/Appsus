@@ -1,7 +1,6 @@
 'use strict'
 import myRoutes from './routes.js'
 import miskipper from './vue-misterKeeper/main.js'
-import EmailsApp from './EmailsApp/main.js'
 
 
 Vue.use(VueRouter);
@@ -32,7 +31,6 @@ new Vue({
 
     },
     components: {
-        miskipper,
-        EmailsApp
+        miskipper
     }
 }).$mount('#app')
