@@ -5,6 +5,8 @@ import miskipper from './vue-misterKeeper/main.js'
 Vue.use(VueRouter);
 const myRouter = new VueRouter({ routes: myRoutes })
 
+
+
 new Vue({
     template: `
         <section>
@@ -12,6 +14,7 @@ new Vue({
                 <nav>
                 <router-link to="/" exact class="button is-dark">home </router-link>
                     <router-link to="/MrKeeper" exact class="button is-dark">mr keeper </router-link>
+                    <router-link to="/PlacesApp" exact class="button is-dark">Places</router-link>
                 </nav>
                 <router-view></router-view>
         </section>
@@ -20,10 +23,10 @@ new Vue({
 
 
 
-    
+
     router: myRouter,
     methods: {
-               
+
     },
     components: {
         miskipper

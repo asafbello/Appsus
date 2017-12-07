@@ -1,0 +1,15 @@
+#map {
+    height: 400px;
+    width: 400px;  
+}
+.placesList {
+    height: 150px;
+    background-color: lightpink;
+}
+.mainPlaces {
+    display: flex;
+    flex-direction: row;
+}
+.mainPlaces form {
+    align-self: flex-start;
+}
