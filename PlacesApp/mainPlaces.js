@@ -15,10 +15,12 @@ export default {
             <button v-on:click="searchPlace">search</button>
             {{searchTxt}}
         </form> 
-             <div id="map"></div>
+        <container class="mapSection>
+             <div id="map" ></div>
              <MyPlaces class="MyPlaces"></MyPlaces>
              <button v-on:click="savePlace">save</button>
              {{placeData}}
+            </container>
         </section>
     `,
     data() {
@@ -31,11 +33,12 @@ export default {
     methods: {
         searchPlace() {
             console.log(this.searchTxt)
-            hendelSerch.hendelSerch(this.searchTxt).then(res => {
-                return res.json();
-            })
+            hendelSerch.hendelSerch(this.searchTxt)
+               // .then(res => res.json())
+                //.then(res => console.log("************", res))
             
         },
+
         savePlace() {
 
         }

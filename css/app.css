@@ -6,10 +6,7 @@
     height: 150px;
     background-color: lightpink;
 }
-.mainPlaces {
+.mapSection{
     display: flex;
     flex-direction: row;
-}
-.mainPlaces form {
-    align-self: flex-start;
 }

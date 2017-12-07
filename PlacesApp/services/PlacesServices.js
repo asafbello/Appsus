@@ -41,7 +41,6 @@ function hendelSerch(adress) {
             initMap(lat, lng)
             //setAdressByCord(lat, lng)
             // setWeatherByCord(lat, lng)
-            //  initMap(lat, lng)
             return data;
         })
 
