@@ -4,8 +4,8 @@ import MailServices from './services/MailServices.js'
 import mailDetails from './cmps/mailDetails.js'
 
 export default {
-    
-    template: `
+
+  template: `
         <section class="mails-homepage">
         <nav class="panel">
         <p class="panel-heading">
@@ -26,7 +26,7 @@ export default {
           <a>Newest</a>
           <a>Oldest</a>
         </p>
-        <a class="panel-block is-active"  v-for="mail in mails" :class="{boldSubject: !mail.isRead}"  @click="mail.isRead = true">
+        <a class="panel-block is-active"  v-for="mail in mails" :class="{boldSubject: !mail.isRead}"  @click="readMail(mail.id)">
           <span class="panel-icon">
             <i class="fa fa-book"></i>
           </span>
@@ -42,37 +42,43 @@ export default {
         </section>
     `,
 
-    // router: myRouter,
-    data() {
-      return {
-          mails: [],
-          isRead: MailServices.isRead,
-          selectedMail: null
-      }
-  },
-    created() {
-      MailServices.getMails()
-          .then(mails => {
-            console.log(mails, 'mails')
-              this.mails = mails
-          })
-          .catch(err => {
-              this.mails = []
-          })
-
-          var idFromParams = +this.$route.params.id
-          console.log({idFromParams})
-          if (idFromParams){
-             MailServices.getmailById(idFromParams)
-             .then(mail => {
-               this.selectedMail = mail
-
-          })
-          }
-    },
-    components: {
-      mailDetails,
+  // router: myRouter,
+  data() {
+    return {
+      mails: [],
+      isRead: MailServices.isRead,
+      selectedMail: null
     }
+  },
+  created() {
+    MailServices.getMails()
+      .then(mails => {
+        console.log(mails, 'mails')
+        this.mails = mails
+      })
+      .catch(err => {
+        this.mails = []
+      })
+
+    var idFromParams = +this.$route.params.id
+    console.log({ idFromParams })
+    if (idFromParams) {
+      this.readMail(idFromParams);
+    }
+  },
+  methods: {
+    readMail(mailId) {
+      MailServices.getmailById(mailId)
+        .then(mail => {
+          mail.isRead = true;
+          this.selectedMail = mail
+          this.$router.push('/EmailsApp/' + mailId);
+        });
+    }
+  },
+  components: {
+    mailDetails,
+  }
 }
 
 
