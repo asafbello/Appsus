@@ -14,7 +14,7 @@ export default {
         </p>
         <div class="panel-block">
           <p class="control has-icons-left">
-            <input class="input is-small" type="text" placeholder="search">
+            <input class="input is-small" type="search" v-model="searchedTerm" @input="searchMail" placeholder="search">
             <span class="icon is-small is-left">
               <i class="fa fa-search"></i>
             </span>
@@ -50,8 +50,9 @@ export default {
       mails: [],
       isRead: MailServices.isRead,
       selectedMail: null,
-      isNewMailMode: false
-     
+      isNewMailMode: false,
+      searchedTerm: ''
+
     }
   },
   created() {
@@ -71,12 +72,19 @@ export default {
     }
   },
   methods: {
-    sendNewMail(mail) {
-     this.mails.push(mail)
-     this.isNewMailMode = false;
+    searchMail() {
+      MailServices.filterByTxt(this.searchedTerm)
+        .then(mails => {
+          this.mails = mails
+        })
     },
 
-    openNewMail(){
+    sendNewMail(mail) {
+      this.mails.push(mail)
+      this.isNewMailMode = false;
+    },
+
+    openNewMail() {
       this.isNewMailMode = !this.isNewMailMode;
     },
     readMail(mailId) {
@@ -88,33 +96,31 @@ export default {
           this.$router.push('/EmailsApp/' + mailId);
         });
     },
- 
+
 
     deleteMail(mailId) {
-      MailServices. deleteMail(mailId)
+      MailServices.deleteMail(mailId)
     },
 
     sortUnread() {
       MailServices.sortUnread()
-      MailServices.getCopyMails()
-      .then(mails => {
-        this.mails = mails
-      })
+        .then(mails => {
+          this.mails = mails
+        })
     },
 
     sortRead() {
       MailServices.sortRead()
-      MailServices.getCopyMails()
-      .then(mails => {
-        this.mails = mails
-      })
+        .then(mails => {
+          this.mails = mails
+        })
     },
 
     sortAll() {
       MailServices.getMails()
-      .then(mails => {
-        this.mails = mails
-      })
+        .then(mails => {
+          this.mails = mails
+        })
     },
 
     sortByDate() {
@@ -123,7 +129,7 @@ export default {
   },
 
   computed: {
-    unReadIndicator(){ 
+    unReadIndicator() {
       return this.mails.filter(mail => !mail.isRead).length;
     }
   },

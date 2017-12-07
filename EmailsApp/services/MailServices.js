@@ -52,6 +52,15 @@ function getmailById(mailId) {
     })
 }
 
+function filterByTxt (searchedTerm) {
+    mailsCopy = [];
+    mails.forEach(mail => {
+        if ((mail.subject.toLowerCase()).includes(searchedTerm)) {
+            mailsCopy.push(mail)
+        }})
+    return Promise.resolve(mailsCopy);
+} 
+
 function deleteMail(mailId) {
     return new Promise((resolve, reject) => {
         var mailIdx = mails.findIndex(mail => mail.id === mailId)
@@ -62,10 +71,13 @@ function deleteMail(mailId) {
 
 function sortUnread () {
     mailsCopy = mails.filter(mail => !mail.isRead)
+    return Promise.resolve(mailsCopy);
 }
 
 function sortRead () {
     mailsCopy = mails.filter(mail => mail.isRead)
+    return Promise.resolve(mailsCopy);
+    // mailsCopy = mails.filter(mail => mail.isRead)
  }
 
  function compareByDate(a, b) {
@@ -100,5 +112,6 @@ export default {
     sortRead,
     getCopyMails,
     sortByDate,
-    _getNextId
+    _getNextId,
+    filterByTxt
 }
