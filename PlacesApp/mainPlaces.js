@@ -41,19 +41,21 @@ export default {
 
         addPlace() {
             // createPlace.createPlace(this.placeData),
-            this.placeToUpdate.fullAdress = (this.placeData.results[0].address_components[0].long_name) + ('  ') + (this.placeData.results[0].address_components[3].long_name);
+
+            this.placeToUpdate.fullAdress = (this.placeData.results[0].address_components[0].long_name) + ('  ') 
             this.placeToUpdate.id = this.placeData.results[0].place_id
             this.placeToUpdate.lat = this.placeData.results[0].geometry.location.lat;
             this.placeToUpdate.lng = this.placeData.results[0].geometry.location.lng;
             PlacesServices.createPlace(this.placeToUpdate).then(msg => this.placeToUpdate = {});
             this.placeData = {}
+            console.log('lat:', this.placeToUpdate.lat ,'lng:' ,   this.placeToUpdate.lng )
         },
         editPlace(place) {
             debugger;
             this.placeToEdit = place;
         }
 
-
+// (if(this.placeData.results[0].address_components[3].long_name));
     },
     mounted() {
         PlacesServices.initMap();

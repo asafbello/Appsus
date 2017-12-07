@@ -2,23 +2,23 @@
 
 var places = [
     {
-        fullAdress: 'habonim',
-        name: 'home',
-        description: 'blalbla',
+        fullAdress: 'hacotel-hamaravi jerusalem ',
+        name: 'hacotel',
+        description: 'the  holyest place in the world',
         id: '05151',
-        img: '',
-        lat: 35,
-        lng: 45,
+        img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669030/hacotel_xzk6hc.jpg",
+        lat: 31.783791,
+        lng: 35.2345085,
         tag: 'fun'
     },
     {
-        fullAdress: 'tel-aviv',
-        name: 'pull',
-        description: 'blalbla',
+        fullAdress: 'machne yehuda market',
+        name: 'sreet view',
+        description: 'A wonderful market with all the special produce of the country and especially from the villages around Jerusalem ',
         id: '4151',
-        img: '',
-        lat: 55,
-        lng: 45,
+        img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669025/machane_edueba.jpg",
+        lat: 31.764109,
+        lng: 35.213664,
         tag: 'fun'
     }
 ]
@@ -88,23 +88,48 @@ function updatePlace(place) {
 
 
 function initMap(lat, lng) {
-    if (!lat) lat = 32.0749831;
-    if (!lng) lng = 34.9120554;
+    if (!lat) lat = 31.7767189;
+    if (!lng) lng = 35.2345085;
 
     var map = new google.maps.Map(
         document.getElementById('map'),
         {
             center: { lat: lat, lng: lng },
-            zoom: 15
+            zoom: 13
         }
     );
-    var marker = new google.maps.Marker({
-        position: { lat: lat, lng: lng },
-        map: map,
-        title: 'Hello World!'
-    });
+   
+    var marker, i;
 
+    for (i = 0; i < places.length; i++) {
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(places[i].lat, places[i].lng),
+            map: map
+
+        });
+    }
+    marker = new google.maps.Marker({
+        position: new google.maps.LatLng( lat,lng ),
+        map: map
+    
+    }) 
 }
+// var marker = new google.maps.Marker({
+//     position: { lat: lat, lng: lng },
+//     map: map,
+//     title: 'Hello World!'
+
+//   var map = new google.maps.Map(document.getElementById('map'), {
+//     zoom: 10,
+//     center: new google.maps.LatLng(-33.92, 151.25),
+//     mapTypeId: google.maps.MapTypeId.ROADMAP
+//   });
+
+//   var infowindow = new google.maps.InfoWindow();
+
+
+
+
 export default {
     places,
     initMap,
