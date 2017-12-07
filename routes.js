@@ -1,6 +1,6 @@
 import HomePage from './pages/HomePage.js'
 import miskipper from './vue-misterKeeper/main.js'
-import EmailsApp from './EmailsApp/main.js'
+import EmailsApp from './EmailsApp/EmailsApp.js'
 import mainPlaces from './PlacesApp/mainPlaces.js'
 
 
@@ -14,14 +14,18 @@ const routes = [
         component: miskipper
     },
     {
-        path: '/EmailsApp',
+        path: '/EmailsApp/',
         component: EmailsApp
     },
     {
-    path: '/PlacesApp',
-    component: mainPlaces
+        path: '/EmailsApp/:id',
+        component: EmailsApp
     },
- 
+    {
+        path: '/PlacesApp',
+        component: mainPlaces
+    },
+
 
 ];
 
