@@ -2,6 +2,7 @@
 
 var places = [
     {
+        fullAdress:'habonim',
         name: 'home',
         description: 'blalbla',
         id: '05151',
@@ -11,6 +12,7 @@ var places = [
         tag: 'fun'
     },
     {
+        fullAdress:'tel-aviv',
         name: 'pull',
         description: 'blalbla',
         id: '05151',
@@ -21,21 +23,17 @@ var places = [
     }
 ]
 
+const BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json";
+const KEY = "AIzaSyAufh21vdBWzVYOdQLqwFhD-EpzWb7U7Ds";
 
 function hendelSerch(adress) {
 
 
     console.log(adress)
-    var prmInput = fetch(` https://maps.googleapis.com/maps/api/geocode/json?address=${adress}&key=AIzaSyAufh21vdBWzVYOdQLqwFhD-EpzWb7U7Ds`);
-
-
-    prmInput
-        .then(res => {
-            return res.json();
-        })
+    return fetch(`${BASE_URL}?address=${adress}&key=${KEY}`)
+        .then(res => res.json())
         .then(data => {
-
-           
+            if (!data.results || data.results.length === 0) return null;
             var lat = data.results[0].geometry.location.lat;
             var lng = data.results[0].geometry.location.lng;
             initMap(lat, lng)
@@ -43,16 +41,26 @@ function hendelSerch(adress) {
             // setWeatherByCord(lat, lng)
             return data;
         })
-
-        return prmInput;
-        
-        
 }
 
-/////////todo//////////
-// function createPlace {
-    
-// }
+
+function createPlace(rowPlace) {
+
+    return new Promise((resolve, reject) => {
+        try {
+            places.push(rowPlace)
+            resolve(true);
+        } catch (err) {
+            reject(err);
+        }
+    });
+}
+
+function getPlaces() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => { resolve(places) }, 500)
+    });
+}
 
 // function deletePlace {
 
@@ -87,5 +95,7 @@ function initMap(lat, lng) {
 export default {
     places,
     initMap,
-    hendelSerch
+    hendelSerch,
+    createPlace,
+    getPlaces
 }

@@ -1,9 +1,7 @@
 
 import PlacesServices from './services/PlacesServices.js'
-import initMap from './services/PlacesServices.js'
-import hendelSerch from './services/PlacesServices.js'
 import MyPlaces from './cmp/MyPlaces.js'
-
+import EditPlaces from './cmp/EditPlaces.js'
 
 export default {
 
@@ -18,41 +16,44 @@ export default {
         <container class="mapSection>
              <div id="map" ></div>
              <MyPlaces class="MyPlaces"></MyPlaces>
-             <button v-on:click="savePlace">save</button>
-             {{placeData}}
+             <button v-on:click="addPlace">add</button>
             </container>
+            <EditPlaces></EditPlaces>
         </section>
     `,
     data() {
         return {
             searchTxt: '',
-            placeData: {}
+            placeData: {},
+            placeToUpdate: {}
         }
     },
 
     methods: {
         searchPlace() {
-            console.log(this.searchTxt)
-            hendelSerch.hendelSerch(this.searchTxt)
-               // .then(res => res.json())
-                //.then(res => console.log("************", res))
-            
+            PlacesServices.hendelSerch(this.searchTxt)
+                .then(data => this.placeData = data)
         },
 
-        savePlace() {
+        addPlace() {
+            // createPlace.createPlace(this.placeData),
+            this.placeToUpdate.fullAdress = (this.placeData.results[0].address_components[0].long_name) + ('  ') + (this.placeData.results[0].address_components[3].long_name);
+            this.placeToUpdate.id = this.placeData.results[0].place_id
+            this.placeToUpdate.lat = this.placeData.results[0].geometry.location.lat;
+            this.placeToUpdate.lng = this.placeData.results[0].geometry.location.lng;
+            PlacesServices.createPlace(this.placeToUpdate).then(msg => this.placeToUpdate = {}  );
+            this.placeData ={}
+
 
         }
-
-
     },
     mounted() {
         PlacesServices.initMap();
     },
+
     components: {
-        MyPlaces
+        MyPlaces,
+        EditPlaces
     }
-
-
-
-
 }
+
