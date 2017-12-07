@@ -20,23 +20,27 @@ export default {
           </p>
         </div>
         <p class="panel-tabs">
-          <a class="is-active">all</a>
-          <a>Read</a>
-          <a>Unread</a>
+          <a class="is-active" @click="sortAll">all</a>
+          <a @click="sortRead">Read</a>
+          <a @click="sortUnread">Unread</a>
           <a>Newest</a>
           <a>Oldest</a>
         </p>
         <a class="panel-block is-active"  v-for="mail in mails" :class="{boldSubject: !mail.isRead}"  @click="readMail(mail.id)">
           <span class="panel-icon">
-            <i class="fa fa-book"></i>
           </span>
-          {{mail.subject}}
+          
+           {{mail.subject}}
+           <button @click.stop="mail.isRead = !mail.isRead">
+           <i class="fa fa-envelope" aria-hidden="true"></i></button>
+          <a href="#" class="card-footer-item mail-item" @click="deleteMail(mail.id)"><i class="fa fa-trash" aria-hidden="true"></i> </a>
+          
         </a>
      
     
-        <mailDetails :mail="selectedMail" v-if="selectedMail"></mailDetails>
         <div class="panel-block">
         </div>
+        <mailDetails :mail="selectedMail" v-if="selectedMail" class="previewMail"></mailDetails>
       </nav>
                 
         </section>
@@ -68,12 +72,36 @@ export default {
   },
   methods: {
     readMail(mailId) {
+      console.log('readMail');
       MailServices.getmailById(mailId)
         .then(mail => {
           mail.isRead = true;
           this.selectedMail = mail
           this.$router.push('/EmailsApp/' + mailId);
         });
+    },
+    deleteMail(mailId) {
+      MailServices. deleteMail(mailId)
+    },
+    sortUnread() {
+      MailServices.sortUnread()
+      MailServices.getCopyMails()
+      .then(mails => {
+        this.mails = mails
+      })
+    },
+    sortRead() {
+      MailServices.sortRead()
+      MailServices.getCopyMails()
+      .then(mails => {
+        this.mails = mails
+      })
+    },
+    sortAll() {
+      MailServices.getMails()
+      .then(mails => {
+        this.mails = mails
+      })
     }
   },
   components: {
