@@ -77,7 +77,6 @@ function sortUnread () {
 function sortRead () {
     mailsCopy = mails.filter(mail => mail.isRead)
     return Promise.resolve(mailsCopy);
-    // mailsCopy = mails.filter(mail => mail.isRead)
  }
 
  function compareByDate(a, b) {
