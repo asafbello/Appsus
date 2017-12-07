@@ -2,7 +2,7 @@
 
 var places = [
     {
-        fullAdress:'habonim',
+        fullAdress: 'habonim',
         name: 'home',
         description: 'blalbla',
         id: '05151',
@@ -12,10 +12,10 @@ var places = [
         tag: 'fun'
     },
     {
-        fullAdress:'tel-aviv',
+        fullAdress: 'tel-aviv',
         name: 'pull',
         description: 'blalbla',
-        id: '05151',
+        id: '4151',
         img: '',
         lat: 55,
         lng: 45,
@@ -62,12 +62,25 @@ function getPlaces() {
     });
 }
 
+function getPlaceById(placeId) {
+    return c
+}
+
+
 // function deletePlace {
 
 // }
 
+function updatePlace(place) {
+    return new Promise((resolve, reject) => {
+        if (place.id) {
+            var placeToUpdateIdx = places.findIndex(currPlace => currPlace.id === place.id)
+            places.splice(placeToUpdateIdx, 1, place);
+        }
+        // resolve(place)
 
-
+    });
+}
 
 
 
@@ -97,5 +110,6 @@ export default {
     initMap,
     hendelSerch,
     createPlace,
-    getPlaces
+    getPlaces,
+    updatePlace
 }

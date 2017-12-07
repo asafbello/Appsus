@@ -25,9 +25,5 @@
     max-width: 300px;
     background-color: gainsboro;
     padding: 20px;
-    margin: auto;
-}
-.placeDetails {
-    padding: 15px;
-    background-color: lightcoral;
+    margin: auto
 }

@@ -1,5 +1,5 @@
 import PlacesServices from '../services/PlacesServices.js'
-
+import EventBus from '../services/EventBus.js';
 
 
 
@@ -9,7 +9,9 @@ export default {
         <section class="placesList">
         <h1>my places:</h1>
         <ul>
-        <li v-for="place in places" @click="showLocation(place)">
+        <li v-for="place in places">
+       <button @click="showDetails(place)">show details</button> <br>
+       <button @click="editDetails(place)">edit details</button> <br>
         {{place.fullAdress}} <br>
         {{place.name}} <br>
         {{place.tag}} <br>
@@ -17,29 +19,27 @@ export default {
         </ul>
       </section>
         `,
-        data() {
-            return {
-            places : [],
-            }
-        },
+    data() {
+        return {
+            places: [],
+        }
+    },
     created() {
-        debugger;
         PlacesServices.getPlaces()
             .then(places => {
-                // var userMsg = {txt: 'Cars Loaded', type: 'success' }
-                // this.showUserMsg(userMsg);
                 this.places = places
             })
             .catch(err => {
-                // var userMsg = {txt: 'Cars Loaded Failed!', type: 'danger' }
-                // this.showUserMsg(userMsg);
                 this.places = []
             })
     },
     methods: {
-        showLocation(place) {
-            console.log(' showLocation is on')
-            PlacesServices.initMap(place.lat, place.lng)
+        showDetails(place) {
+            PlacesServices.initMap(place.lat, place.lng);
+            EventBus.$emit('show-details', place);
+        },
+        editDetails(place) {
+            this.$emit('editPlace', place);
         }
     }
 }

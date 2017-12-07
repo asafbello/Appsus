@@ -1,41 +1,46 @@
-
+import PlacesServices from '../services/PlacesServices.js'
 
 export default {
 
     template: `
-            <section class="editPlaces" >
-            <input type="text" v-model="name" autofocus>
-            <input type="text" v-model="description" >
-            <input type="text" v-model="img" >
-            <select v-model="selected">
-            <option disabled value="">Please select one</option>
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
+    <section class="editPlaces" >
+            {{place.fullAdress}}
+          
+            {{place.name}}<input type="text" v-model="newPlace.name" placeholder ='enter name..' autofocus>
+            {{place.description}}<input type="text" v-model="newPlace.description" placeholder = 'enter description..' >
+            <input type="text" v-model="newPlace.img" placeholder='enter imag..'>
+            <select v-model="newPlace.tag">
+            <option disabled value="">Please select tag</option>
+            <option>food</option>
+            <option>sport</option>
+            <option>colture</option>
           </select>
-          <span>Selected: {{ selected }}</span>
-            <button v-on:click="searchPlace">search</button>
+          <span>Selected: {{ tag }}</span>
+            <button v-on:click="savePlaceChanges">save</button>
+            <button @click="closeCmp" >vvx</button>
           </section>
             `,
+    props: ['place'],
     data() {
         return {
-
-            fullAdress: '',
-            name: '',
-            description: '',
-            id: '',
+            newPlace: {},
             img: '',
-            lat: '',
-            lng: '',
-            tag: '',
-            selected: ''
+            tag: ''
         }
     },
     created() {
-
+        this.newPlace = this.place;
     },
     methods: {
+        savePlaceChanges() {
+           PlacesServices.updatePlace(this.newPlace);
+           this.closeCmp()
+        },
+        closeCmp() {
+            debugger;
+            this.$emit('editPlace', null);
 
+        }
     }
 }
-    
+
