@@ -7,9 +7,11 @@ export default {
     template: `
                 <section class="placeDetails">
             <h1>place details</h1>
-            {{placeToShow}}
+            {{placeToShow.name}} </br>
+            {{placeToShow. description}} </br>
+           <img :src="placeToShow.img"></br>
+            {{placeToShow.tag}}</br>
                 </section>
-
                 `,
     data() {
         return {
