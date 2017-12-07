@@ -80,6 +80,12 @@ function sortByDate() {
     mails = mails.sort(compareByDate);
 }
 
+function _getNextId() {
+    var maxId = mails.reduce((acc, mail) => {
+        return (mail.id > acc) ? mail.id : acc
+    }, 0);
+    return maxId + 1;
+}
 
 
 
@@ -93,6 +99,6 @@ export default {
     sortUnread,
     sortRead,
     getCopyMails,
-    sortByDate
-
+    sortByDate,
+    _getNextId
 }

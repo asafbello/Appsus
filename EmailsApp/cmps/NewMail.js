@@ -1,3 +1,6 @@
+import MailServices from '../services/MailServices.js'
+
+
 export default {
     template: `
         <section >
@@ -13,7 +16,7 @@ export default {
             <div class="field">
             <label class="label">Name</label>
             <div class="control">
-              <input class="input" type="text" placeholder="Text input">
+              <input class="input" type="text" placeholder="Text input" v-model="subject">
             </div>
           </div>
           
@@ -24,24 +27,21 @@ export default {
               </span>
           <div class="field">
             <label class="label">Email</label>
-            <div class="control has-icons-left has-icons-right">
-              <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+      </div>
+      </div>
+      <div class="control has-icons-left has-icons-right">
+              <input class="input is-danger" type="email" placeholder="Email input" value="hello@" v-model="to">
               <span class="icon is-small is-left">
                 <i class="fa fa-envelope"></i>
               </span>
               <span class="icon is-small is-right">
               </span>
-              <textarea class="textarea" placeholder="Your message"></textarea>
-          <div class="field">
-            <div class="control">
-              <div class="select">
-            
-              </div>
-            </div>
-          </div>
+              <textarea class="textarea" placeholder="Your message" v-model="body"></textarea>
+      </div>
+      
           </section>
           <footer class="modal-card-foot">
-            <button class="button is-success">Send mail</button>
+            <button class="button is-success" @click="sendMail">Send mail</button>
             <button class="button" @click="closeModal">Cancel</button>
           </footer>
         </div>
@@ -51,13 +51,27 @@ export default {
     `,
     data() {
         return {
+            subject:'subject',
             status: 'is-active',
-            test: false
+            test: false,
+            title: 'hhhhhhhh',
+            body: 'body',
+            to: '@to:'
         }
     },
     methods: {
         closeModal() {
             this.$emit('close')
+        },
+
+        sendMail() {
+            var mail = {
+                subject: this.subject,  
+                body: this.body,
+                isRead: false,
+                id: MailServices._getNextId()
+            }
+            this.$emit('sent', mail);
         }
     }
 }

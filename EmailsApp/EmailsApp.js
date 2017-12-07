@@ -39,7 +39,7 @@ export default {
     
         </nav>
         <mailDetails :mail="selectedMail" v-if="selectedMail" class="previewMail"></mailDetails>
-        <new-mail v-if="isNewMailMode" @close="openNewMail"></new-mail>
+        <new-mail v-if="isNewMailMode" @close="openNewMail" @sent="sendNewMail"></new-mail>
                 
         </section>
     `,
@@ -71,6 +71,11 @@ export default {
     }
   },
   methods: {
+    sendNewMail(mail) {
+     this.mails.push(mail)
+     this.isNewMailMode = false;
+    },
+
     openNewMail(){
       this.isNewMailMode = !this.isNewMailMode;
     },
