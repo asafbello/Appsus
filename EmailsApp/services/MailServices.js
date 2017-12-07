@@ -61,14 +61,24 @@ function deleteMail(mailId) {
 }
 
 function sortUnread () {
-    mailsCopy = mails;
-    mailsCopy = mailsCopy.filter(mail => !mail.isRead)
+    mailsCopy = mails.filter(mail => !mail.isRead)
 }
 
 function sortRead () {
-    mailsCopy = mails;
-    mailsCopy = mailsCopy.filter(mail => mail.isRead)
+    mailsCopy = mails.filter(mail => mail.isRead)
  }
+
+ function compareByDate(a, b) {
+    if (a.sentAt < b.sentAt)
+        return 1;
+    if (a.sentAt > b.sentAt)
+        return -1;
+    return 0;
+}
+
+function sortByDate() {
+    mails = mails.sort(compareByDate);
+}
 
 
 
@@ -82,6 +92,7 @@ export default {
     deleteMail,
     sortUnread,
     sortRead,
-    getCopyMails
+    getCopyMails,
+    sortByDate
 
 }

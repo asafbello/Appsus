@@ -9,7 +9,6 @@
 
 .previewMail {
     float: right;
-    max-width: 40vw;
 }
 
 .fa-envelope {
@@ -19,15 +18,7 @@
 
 .mails-homepage {
     display: flex;
-    max-width: 100vw;
 }
-
-.panel-heading {
-    display: flex;
-    justify-content: space-between;
-}
-
-
 
 
 
