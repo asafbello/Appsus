@@ -1,0 +1,14 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="fadeLongT, in, 0, 500, easein" class="elvn-layer">
+    <path fill="#2DB466" d="M82.002 37h-64c-3.313 0-6 1.687-6 5v38c0 3.313 2.687 6 6 6h64c3.313 0 6-2.687 6-6V42C88.002 38.687 85.315 37 82.002 37z"></path>
+    <path fill="#269956" d="M34.194 62.394L16.396 80.192c-0.391 0.391-0.391 1.023 0 1.414s1.023 0.391 1.414 0l17.799-17.799c0.391-0.391 0.391-1.023 0-1.414S34.585 62.003 34.194 62.394zM83.608 80.192L65.81 62.394c-0.391-0.391-1.023-0.391-1.414 0s-0.391 1.023 0 1.414l17.799 17.799c0.391 0.391 1.023 0.391 1.414 0S83.999 80.583 83.608 80.192z"></path>
+    <path fill="#3DD97F" d="M86.812 38.13L52.823 15.77c-1.563-1.029-4.101-1.029-5.664 0L13.172 38.13c-1.564 1.029-1.564 2.697 0 3.727l8.83 5.81 56-0.014 8.81-5.796C88.376 40.827 88.376 39.159 86.812 38.13z"></path>
+    <path fill="#FFFFFF" d="M22.002 36v11.666l25.157 16.551c1.563 1.029 4.101 1.029 5.664 0l25.179-16.564V36H22.002z" data-elvn="fade, in, 500, 300, linear" class="elvn-layer"></path>
+    <g>
+      <path fill="#BBBBBB" d="M30.502 44h39c0.276 0 0.5-0.224 0.5-0.5s-0.224-0.5-0.5-0.5h-39c-0.276 0-0.5 0.224-0.5 0.5S30.226 44 30.502 44z" data-elvn="expandL, in, 800, 200, linear" class="elvn-layer"></path>
+      <path fill="#BBBBBB" d="M69.502 46h-39c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h39c0.276 0 0.5-0.224 0.5-0.5S69.778 46 69.502 46z" data-elvn="expandL, in, 900, 200, linear" class="elvn-layer"></path>
+      <path fill="#BBBBBB" d="M69.502 49h-39c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h39c0.276 0 0.5-0.224 0.5-0.5S69.778 49 69.502 49z" data-elvn="expandL, in, 1000, 200, linear" class="elvn-layer"></path>
+    </g>
+  </g>
+</svg>

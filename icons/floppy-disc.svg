@@ -1,0 +1,10 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_2" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="maskCircle, in, 0, 500, easeout" class="elvn-layer">
+    <path fill="#5D699B" d="M71 17H20c-1.657 0-3 1.343-3 3v60c0 1.657 1.343 3 3 3h60c1.657 0 3-1.343 3-3V29L71 17z"></path>
+    <path fill="#B2B2B2" d="M29 17v21c0 1.657 1.343 3 3 3h36c1.657 0 3-1.343 3-3V17H29z"></path>
+    <rect x="56" y="21" fill="#747A90" width="11" height="16"></rect>
+    <path fill="#D9D9C2" d="M68 51H32c-1.657 0-3 1.343-3 3v29h42V54C71 52.343 69.657 51 68 51z"></path>
+    <path fill="#747A90" d="M36.5 59h27c0.276 0 0.5-0.224 0.5-0.5S63.776 58 63.5 58h-27c-0.276 0-0.5 0.224-0.5 0.5S36.224 59 36.5 59zM63.5 66h-27c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h27c0.276 0 0.5-0.224 0.5-0.5S63.776 66 63.5 66zM63.5 74h-27c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h27c0.276 0 0.5-0.224 0.5-0.5S63.776 74 63.5 74z" data-elvn="maskGradL, in, 500, 500, easeout" class="elvn-layer"></path>
+  </g>
+</svg>

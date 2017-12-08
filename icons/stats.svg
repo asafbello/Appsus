@@ -1,0 +1,17 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g>
+    <g>
+      <path fill="#64A242" d="M23 82.8c-3.198 0-5.8-2.602-5.8-5.8V39.134l21.772-8.907 22.057 16.042L82.8 21.53V77c0 3.198-2.602 5.8-5.8 5.8H23z" data-elvn="fade, in, 700, 0, linear" class="elvn-layer"></path>
+      <path fill="#92D76C" d="M17 39v38c0 3.313 2.687 6 6 6h16V30L17 39z" data-elvn="expandB, in, 0, 300, linear" class="elvn-layer"></path>
+      <path fill="#64A242" d="M61 46v37h16c3.313 0 6-2.687 6-6V21L61 46z" data-elvn="expandB, in, 400, 300, linear" class="elvn-layer"></path>
+      <polygon fill="#7BC156" points="39 30 39 83 61 83 61 46 " data-elvn="expandB, in, 200, 300, linear" class="elvn-layer"></polygon>
+    </g>
+    <g>
+      <circle fill="#F0F2F2" cx="39" cy="31" r="4" data-elvn="scaleC, in, 850, 150, linear" class="elvn-layer"></circle>
+      <circle fill="#F0F2F2" cx="61" cy="44" r="4" data-elvn="scaleC, in, 950, 150, linear" class="elvn-layer"></circle>
+      <circle fill="#F0F2F2" cx="83" cy="22" r="4" data-elvn="scaleC, in, 1050, 150, linear" class="elvn-layer"></circle>
+      <circle fill="#F0F2F2" cx="17" cy="38" r="4" data-elvn="scaleC, in, 750, 150, linear" class="elvn-layer"></circle>
+    </g>
+  </g>
+</svg>

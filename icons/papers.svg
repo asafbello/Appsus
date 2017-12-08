@@ -1,0 +1,11 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g>
+    <rect x="28" y="21" fill="#929292" width="50" height="64" data-elvn="maskSlideTL, in, 600, 600, linear" class="elvn-layer"></rect>
+    <g data-elvn="expandT, in, 0, 600, linear" class="elvn-layer">
+      <polygon fill="#FFFFFF" points="59 16 23 16 23 80 73 80 73 30 "></polygon>
+      <polygon fill="#D6D6D6" points="59 16 59 30 73 30 "></polygon>
+    </g>
+    <path fill="#BBBBBB" d="M33.5 36h29c0.276 0 0.5-0.224 0.5-0.5S62.776 35 62.5 35h-29c-0.276 0-0.5 0.224-0.5 0.5S33.224 36 33.5 36zM62.5 45h-29c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h29c0.276 0 0.5-0.224 0.5-0.5S62.776 45 62.5 45zM62.5 55h-29c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h29c0.276 0 0.5-0.224 0.5-0.5S62.776 55 62.5 55zM62.5 65h-29c-0.276 0-0.5 0.224-0.5 0.5s0.224 0.5 0.5 0.5h29c0.276 0 0.5-0.224 0.5-0.5S62.776 65 62.5 65z" data-elvn="maskSlideTL, in, 650, 400, linear" class="elvn-layer"></path>
+  </g>
+</svg>

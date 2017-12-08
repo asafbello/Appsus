@@ -1,0 +1,10 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g>
+    <g data-elvn="fadeLongB, in, 0, 600, easein" class="elvn-layer">
+      <polygon fill="#8F6349" points="24 30.3 34 83.5 66 83.5 76 30.3 "></polygon>
+      <polygon fill="#9C8679" points="24 40.5 29 63.5 71 63.5 76 40.5 "></polygon>
+    </g>
+    <polygon fill="#F1F1F1" points="74 23.5 69 23.5 66 16.5 34 16.5 31 23.5 26 23.5 23 30.5 77 30.5 " data-elvn="fadeShortT, in, 600, 300, easein" class="elvn-layer"></polygon>
+  </g>
+</svg>

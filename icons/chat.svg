@@ -1,0 +1,10 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g>
+    <path fill="#FFAD10" d="M80 24h-4.522l-9.654-9.655c-0.453-0.453-1.188-0.453-1.64 0L54.528 24H34c-3.313 0-6 2.687-6 6v30c0 3.313 2.687 6 6 6h46c3.313 0 6-2.687 6-6V30C86 26.687 83.313 24 80 24z" data-elvn="fadeShortT, in, 0, 400, linear" class="elvn-layer"></path>
+    <g data-elvn="fadeShortB, in, 400, 400, linear" class="elvn-layer">
+      <path fill="#00A3C6" d="M66 34H20c-3.313 0-6 2.687-6 6v30c0 3.313 2.687 6 6 6h4.522l9.655 9.655c0.452 0.453 1.187 0.453 1.639 0L45.472 76H66c3.313 0 6-2.687 6-6V40C72 36.687 69.313 34 66 34z"></path>
+      <path fill="#006A81" d="M31 51c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4S33.209 51 31 51zM43 51c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4S45.209 51 43 51zM55 51c-2.209 0-4 1.791-4 4s1.791 4 4 4 4-1.791 4-4S57.209 51 55 51z"></path>
+    </g>
+  </g>
+</svg>

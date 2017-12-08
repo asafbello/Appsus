@@ -1,0 +1,10 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="wheelT, in, 0, 700, easein" class="elvn-layer">
+    <path fill="#D14419" d="M51 88c-20.402 0-37-16.598-37-37 0-20.402 16.599-37 37-37 20.402 0 37 16.599 37 37C88 71.402 71.402 88 51 88zM51 32c-10.477 0-19 8.523-19 19 0 10.478 8.523 19 19 19 10.478 0 19-8.522 19-19C70 40.523 61.478 32 51 32z"></path>
+    <path fill="#FFFFFF" d="M32 51c0-3.032 0.729-5.887 1.992-8.43l-18.105-3.233C14.669 43.005 14 46.923 14 51c0 4.077 0.669 7.995 1.887 11.663l18.105-3.233C32.729 56.887 32 54.032 32 51z"></path>
+    <path fill="#FFFFFF" d="M51 32c3.032 0 5.887 0.729 8.43 1.992l3.233-18.105C58.995 14.669 55.077 14 51 14c-4.077 0-7.995 0.669-11.663 1.887l3.233 18.105C45.113 32.729 47.968 32 51 32z"></path>
+    <path fill="#FFFFFF" d="M86.113 39.337L68.009 42.57C69.271 45.113 70 47.968 70 51c0 3.032-0.729 5.887-1.991 8.43l18.104 3.233C87.331 58.995 88 55.077 88 51 88 46.923 87.331 43.005 86.113 39.337z"></path>
+    <path fill="#FFFFFF" d="M51 70c-3.032 0-5.887-0.729-8.43-1.991l-3.233 18.104C43.005 87.331 46.923 88 51 88c4.077 0 7.995-0.669 11.663-1.887L59.43 68.009C56.887 69.271 54.032 70 51 70z"></path>
+  </g>
+</svg>

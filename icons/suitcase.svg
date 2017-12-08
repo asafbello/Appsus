@@ -1,0 +1,11 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="flipY, in, 0, 500, linear" class="elvn-layer">
+    <path fill="#B75B24" d="M15 52v26c0 3.313 2.687 6 6 6h58c3.313 0 6-2.687 6-6V52H15z"></path>
+    <path fill="#9A4C1D" d="M79 28H65v-6c0-3.313-2.687-6-6-6H41c-3.313 0-6 2.687-6 6v6H21c-3.313 0-6 2.687-6 6v19h70V34C85 30.687 82.313 28 79 28zM60 28H40v-4c0-1.657 1.343-3 3-3h14c1.657 0 3 1.343 3 3V28z"></path>
+    <g>
+      <circle fill="#C89211" cx="32" cy="53" r="4" data-elvn="gaussBlur, in, 550, 400, 6" class="elvn-layer"></circle>
+      <circle fill="#C89211" cx="68" cy="53" r="4" data-elvn="gaussBlur, in, 550, 400, 6" class="elvn-layer"></circle>
+    </g>
+  </g>
+</svg>

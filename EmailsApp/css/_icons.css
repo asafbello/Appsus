@@ -1,0 +1,84 @@
+.trash {
+	background:red;
+	width: 12px;
+	height: 14.4px;
+	display: inline-block;
+	margin:0 auto;
+	
+	position: relative;
+
+
+}
+.trash:after {
+	position: absolute;
+	left: -99px;
+	right: 0;
+	bottom: -50px;
+	width: 100px;
+}
+.trash span {
+	position: absolute;
+    height: 2.25px;
+    width: 18px;
+	background: red;
+	top: -5px;
+	left: -3px;
+	right: -10px;
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	transform: rotate(0deg);
+	transition: transform 250ms;
+	transform-origin: 100% 19%;
+}
+.trash span:after {
+	content: '';
+	position: absolute;
+	width: 4.9px;
+	height: 1.2px;
+	background: red;
+    top: -2.5px;
+	
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	transform: rotate(0deg);
+	transition: transform 250ms;
+	transform-origin: 100% 19%;
+	left: 7px;
+}
+
+
+.trash i {
+	position:relative;
+	width: 0.9px;
+	height:9px;
+	background:#fff;
+	display:block;
+	margin:14px auto;
+	border-radius: 5px;
+}
+.trash i:after {
+	content: '';
+	width: 0.9px;
+	height: 9px;
+	background: #fff;
+	position: absolute;
+	left: -4.5px;
+	border-radius: 5px;
+}
+.trash i:before {
+	content: '';
+	width: 1.8px;
+	height: 18px;
+	background: #fff;
+	position: absolute;
+	right: -36px;
+	border-radius: 5px;
+}
+
+.trash:hover span {
+	transform: rotate(60deg);
+	transition: transform 250ms;
+}
+
+

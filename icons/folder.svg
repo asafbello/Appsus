@@ -1,0 +1,9 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="maskRhomb, in, 0, 500, linear" class="elvn-layer">
+    <path fill="#9C4588" d="M54 25c-15 0-11-8-24-8h-9c-3.313 0-6 2.687-6 6v54c0 3.313 2.687 6 6 6h43c3.313 0 6-2.687 6-6V25C70 25 60 25 54 25z"></path>
+    <rect x="17" y="29" fill="#D9D9D9" width="58" height="52" data-elvn="fadeShortT, in, 500, 300, linear" class="elvn-layer"></rect>
+    <rect x="21" y="35" fill="#FFFFFF" width="59" height="47" data-elvn="fadeShortT, in, 800, 300, linear" class="elvn-layer"></rect>
+    <path fill="#BF67AB" d="M25 41v34c0 4-2 6-4 6 -1.363 0-4.031-0.787-4.609-1.924C17.238 81.362 19.419 83 22 83h57c3.313 0 6-2.687 6-6V41H25z"></path>
+  </g>
+</svg>

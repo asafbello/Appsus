@@ -51,12 +51,12 @@ export default {
     `,
     data() {
         return {
-            subject:'subject',
+            subject: 'subject',
             status: 'is-active',
             test: false,
             title: 'hhhhhhhh',
             body: 'body',
-            to: '@to:'
+            to: '@to:',
         }
     },
     methods: {
@@ -66,10 +66,12 @@ export default {
 
         sendMail() {
             var mail = {
-                subject: this.subject,  
+                subject: this.subject,
                 body: this.body,
                 isRead: false,
-                id: MailServices._getNextId()
+                id: MailServices._getNextId(),
+                sentAt: Date.now()
+
             }
             this.$emit('sent', mail);
         }

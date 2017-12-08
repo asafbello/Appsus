@@ -10,7 +10,6 @@ export default {
             <article class="message">
             <div class="message-header">
             <h1>{{mail.subject}}</h1>
-              <button class="delete" aria-label="delete"></button>
             </div>
             <div class="message-body">
              {{mail.body}}

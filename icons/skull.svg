@@ -1,0 +1,13 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g>
+    <g data-elvn="expandX, in, 0, 400, linear" class="elvn-layer">
+      <path fill="#F1F1F1" d="M40 84.8c-3.198 0-5.8-2.602-5.8-5.8v-4.407l-0.1-0.058C24.292 68.86 18.2 58.31 18.2 47c0-17.535 14.265-31.8 31.8-31.8 17.534 0 31.8 14.265 31.8 31.8 0 11.31-6.093 21.86-15.9 27.535l-0.1 0.058V79c0 3.198-2.602 5.8-5.8 5.8H40z"></path>
+      <path fill="#F1F1F1" d="M50 15v70h10c3.313 0 6-2.687 6-6v-4.292C75.563 69.175 82 58.843 82 47 82 29.327 67.673 15 50 15z"></path>
+      <path fill="#FFFFFF" d="M18 47c0 11.843 6.438 22.175 16 27.708V79c0 3.313 2.687 6 6 6h10V15C32.327 15 18 29.327 18 47z"></path>
+    </g>
+    <circle fill="#8E8E8E" cx="40" cy="52" r="5" data-elvn="expandY, in, 900, 400, linear" class="elvn-layer"></circle>
+    <circle fill="#8E8E8E" cx="60" cy="52" r="5" data-elvn="expandY, in, 900, 400, linear" class="elvn-layer"></circle>
+    <path fill="#8E8E8E" d="M47.712 58.226c-0.147 0.477-3.502 7.257-3.666 7.821C43.926 66.459 44.059 67 44.331 67H48c1 0 1-1 1-2v-6.085C49 57.905 47.844 57.799 47.712 58.226zM55.954 66.047c-0.164-0.564-3.519-7.345-3.666-7.821C52.156 57.799 51 57.905 51 58.915V65c0 1 0 2 1 2h3.669C55.941 67 56.074 66.459 55.954 66.047z" data-elvn="rubberX, in, 450, 400, linear" class="elvn-layer"></path>
+  </g>
+</svg>

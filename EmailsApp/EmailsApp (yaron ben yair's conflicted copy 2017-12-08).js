@@ -29,7 +29,6 @@ export default {
         </p>
         <div class="panel-block-wrapper">
         <a class="panel-block is-active"  v-for="mail in mails" :class="{boldSubject: !mail.isRead}"  @click="readMail(mail.id)">
-        <div class="subject-wrapper">
         <span class="panel">
         {{mail.subject}}
         </span>
@@ -42,8 +41,7 @@ export default {
         </span>
         </span>
         </div>
-        </div>
-        <div :class="{ mobile: mail.isActive}" >{{mail.body}}</div>
+        <div clas>{{mail.body}}</div>
         </a>
         </div>
         </nav>
@@ -61,7 +59,7 @@ export default {
       isRead: MailServices.isRead,
       selectedMail: null,
       isNewMailMode: false,
-      searchedTerm: '',
+      searchedTerm: ''
 
     }
   },
@@ -100,11 +98,8 @@ export default {
     readMail(mailId) {
       MailServices.getmailById(mailId)
         .then(mail => {
-          if (window.innerWidth < 768) {
-            mail.isActive = !mail.isActive;
-          }
           mail.isRead = true;
-          this.selectedMail = mail;
+          this.selectedMail = mail
           this.$router.push('/EmailsApp/' + mailId);
         });
     },

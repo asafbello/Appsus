@@ -1,15 +1,35 @@
+@import '_icons.css';
+@import '_EnveloppIcon.css';
+
+_EnveloppIcon
+
 .mails-homepage {
     max-width: 25vw;
     margin-top: 30px;
 }
 
 .boldSubject {
-    font-weight: 900;
+    font-weight: bold;
+}
+
+.panel {
+    margin-bottom: 0 !important;
+}
+
+.panel-block {
+    display: flex;
+    justify-content: space-between;
+    min-width: 210px;
+    flex-flow: column;
 }
 
 .previewMail {
     float: right;
-    max-width: 40vw;
+    width: 100%;
+}
+
+.message {
+    height: 100%;
 }
 
 .fa-envelope {
@@ -25,8 +45,33 @@
 .panel-heading {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
+.panel-icons{
+    display: flex;
+    width: 80px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-footer-item{
+    flex-grow: 0;
+}
+
+.mobile{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+
+    .previewMail{
+        display: none;
+    }
+    .panel {
+        width: 100%;
+    }
+}
 
 
 

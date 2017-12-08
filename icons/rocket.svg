@@ -1,0 +1,12 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="fadeLongBL, in, 0, 600, easein" class="elvn-layer">
+    <path fill="#FF5400" d="M27.854 72.146c-2.344-2.343-6.064-2.421-8.312-0.174 -2.576 2.576-2.296 9.366-1.588 10.074 0.707 0.707 7.497 0.987 10.073-1.589C30.275 78.21 30.197 74.489 27.854 72.146z" data-elvn="pulse, in, 600, 600, linear" class="elvn-layer"></path>
+    <g>
+      <polygon fill="#7D7D7D" points="25.025 52.347 17.247 57.297 42.703 82.753 47.653 74.975 "></polygon>
+      <path fill="#B0CED8" d="M81.594 18.406c0 0-22.754-6.855-42.382 12.771 -9.922 9.922-20.55 11.977-20.55 11.977l-1.415 1.414 38.185 38.185 1.414-1.415c0 0 2.055-10.628 11.977-20.55C88.449 41.16 81.594 18.406 81.594 18.406z"></path>
+      <circle fill="#8BABB6" cx="56.846" cy="43.154" r="10"></circle>
+      <circle fill="#EDF5F8" cx="56.845" cy="43.155" r="7"></circle>
+    </g>
+  </g>
+</svg>

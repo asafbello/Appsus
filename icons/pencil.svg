@@ -1,0 +1,14 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="fadeLongR, in, 0, 500, easein" class="elvn-layer">
+  	<g data-elvn="custom, in, 600, 400, 100, easein" data-elvncustom="t0,0r-89,15,85" class="elvn-layer">
+      <polygon fill="#456FD8" points="54.037 23.021 18.856 58.219 26.504 65.871 61.686 30.673 "></polygon>
+      <polygon fill="#567FE5" points="60.686 29.673 25.504 64.871 34.153 73.522 69.333 38.324 "></polygon>
+      <polygon fill="#3258B6" points="68.333 37.324 33.153 72.522 41.8 81.175 76.981 45.977 "></polygon>
+      <path fill="#FF72B1" d="M83.1 30.673L69.333 16.899c-2.534-2.535-6.643-2.535-9.178 0L83.1 39.854C85.634 37.319 85.634 33.208 83.1 30.673z"></path>
+      <path fill="#C6C6C6" d="M84 38.955L61.056 16c-0.422-0.423-1.106-0.423-1.529 0l-5.589 5.591c-0.422 0.423-0.422 1.108 0 1.53l22.944 22.956c0.423 0.422 1.107 0.422 1.529 0L84 40.485C84.423 40.063 84.423 39.377 84 38.955z"></path>
+      <polygon fill="#FFC833" points="18.856 58.219 15.033 85 41.8 81.175 "></polygon>
+      <polygon fill="#567FE5" points="16.371 74.627 14.033 86 25.401 83.661 "></polygon>
+    </g>
+  </g>
+</svg>

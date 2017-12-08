@@ -1,0 +1,9 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="fadeLongTR, in, 0, 600, easein" class="elvn-layer">
+    <polygon fill="#FFF3B9" points="62 57.801 38 57.801 28 82 72 82 " data-elvn="maskGradT, in, 700, 500, easeout" class="elvn-layer"></polygon>
+    <ellipse fill="#7E8CA6" cx="50" cy="44" rx="37" ry="15"></ellipse>
+    <path fill="#56627A" d="M50 38c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6S53.313 38 50 38zM70 38c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6S73.313 38 70 38zM30 38c-3.313 0-6 2.687-6 6s2.687 6 6 6 6-2.687 6-6S33.313 38 30 38z"></path>
+    <path fill="#8DDDFF" d="M50 18c-6.627 0-12 5.373-12 12h24C62 23.373 56.628 18 50 18z"></path>
+  </g>
+</svg>

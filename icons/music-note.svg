@@ -1,0 +1,7 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g>
+    <path fill="#DA863C" d="M37 28.004v42.201c-1.501-0.276-3.198-0.287-5 0.032 -6.075 1.076-11 5.423-11 9.707s4.925 6.885 11 5.809c6.075-1.077 11-5.423 11-9.707 0-0.014-0.003-0.027-0.003-0.041H43v-32l30-10v25.201c-1.501-0.276-3.197-0.287-5 0.032 -6.075 1.076-11 5.423-11 9.707s4.925 6.885 11 5.809c6.075-1.077 11-5.423 11-9.707 0-0.014-0.003-0.027-0.003-0.041H79v-51L37 28.004z" data-elvn="maskSlideT, in, 0, 600, easeout" class="elvn-layer"></path>
+    <path fill="#A76224" d="M73 19.004v4l-30 10v-4L73 19.004zM43 36.004v4l30-10v-4L43 36.004z" data-elvn="maskSlideL, in, 650, 300, linear" class="elvn-layer"></path>
+  </g>
+</svg>

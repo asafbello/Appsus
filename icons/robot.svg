@@ -1,0 +1,13 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g>
+    <path fill="#A0ABBD" d="M57 21.5c0-3.866-3.134-7-7-7s-7 3.134-7 7c0 3.171 2.109 5.845 5 6.706V35.5h4v-7.294C54.891 27.345 57 24.671 57 21.5z" data-elvn="custom, in, 600, 400, 0, linear" data-elvncustom="t0,40" class="elvn-layer"></path>
+    <path fill="#39517A" d="M15 67.5l7 4v-23l-7 4V67.5zM78 48.5v23l7-4v-15L78 48.5z" data-elvn="rubberX, in, 400, 400, linear" class="elvn-layer"></path>
+    <g data-elvn="expandX, in, 0, 400, linear" class="elvn-layer">
+      <rect x="26.086" y="35.589" fill="#4C70AF" width="47.828" height="49.822"></rect>
+      <path fill="#6384BE" d="M26 35.5c-2.209 0-4 1.791-4 4v42c0 2.209 1.791 4 4 4h24v-50H26z"></path>
+      <path fill="#4C70AF" d="M74 35.5H50v50h24c2.209 0 4-1.791 4-4v-42C78 37.291 76.209 35.5 74 35.5z"></path>
+    </g>
+    <path fill="#FFFFFF" d="M40 55.5c-2.761 0-5 2.238-5 5s2.239 5 5 5 5-2.238 5-5S42.761 55.5 40 55.5zM60 55.5c-2.762 0-5 2.238-5 5s2.238 5 5 5 5-2.238 5-5S62.762 55.5 60 55.5z" data-elvn="gaussBlur, in, 800, 400, 4" class="elvn-layer"></path>
+  </g>
+</svg>

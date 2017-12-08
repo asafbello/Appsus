@@ -1,0 +1,10 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="maskSlideR, in, 0, 500, linear" class="elvn-layer">
+    <path fill="#41639E" d="M71 31H29c-10.493 0-19 8.507-19 19s8.507 19 19 19h42c10.493 0 19-8.507 19-19S81.493 31 71 31z"></path>
+    <g data-elvn="custom, in, 700, 500, 100, linear" data-elvncustom="t-40,0" class="elvn-layer">
+      <circle fill="#C4C4C4" cx="70" cy="50" r="16"></circle>
+      <circle fill="#9F9F9F" cx="70" cy="50" r="12"></circle>
+    </g>
+  </g>
+</svg>

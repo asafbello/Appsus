@@ -1,0 +1,7 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="pulse, in, 0, 800, linear" class="elvn-layer">
+    <polygon fill="#FFD928" points="76.5 39.5 55.9 39.5 68.5 15.5 37.5 15.5 23.5 55.5 43.167 55.5 33.5 84.5 "></polygon>
+    <path fill="#FFF3B9" d="M63.5 17.5h-23l-13 36 16-32L63.5 17.5zM37.5 78.5l11.5-23h-3.194L37.5 78.5z"></path>
+  </g>
+</svg>

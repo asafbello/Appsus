@@ -1,0 +1,12 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g data-elvn="flyRotateC, in, 0, 500, linear" class="elvn-layer">
+    <path fill="#E0DECD" d="M80.968 32.098L81 32c0 0-0.387 0-1 0h-5c-13 0-9-11-18-11 -3 0-7 0-7 0s-4 0-7 0c-9 0-5 11-18 11h-5c-0.613 0-1 0-1 0l0.032 0.098C16.182 32.563 14 35.018 14 38v36c0 3.313 2.687 6 6 6h60c3.313 0 6-2.687 6-6V38C86 35.018 83.818 32.563 80.968 32.098z"></path>
+    <rect x="14" y="46" fill="#3376D2" width="72" height="20"></rect>
+    <circle fill="#D25133" cx="79" cy="39" r="3"></circle>
+    <path fill="#FFFFFF" d="M56 24H44c-2.096 0-4 5-4 5 0 1.657 1.343 3 3 3h14c1.657 0 3-1.343 3-3C60 29 58.096 24 56 24z"></path>
+    <circle fill="#CAC8B7" cx="50" cy="55" r="18"></circle>
+    <circle fill="#A6A495" cx="50" cy="55" r="13" data-elvn="scaleC, in, 600, 250, bounce" class="elvn-layer"></circle>
+    <path fill="#A6A495" d="M27 29h-4c-1.657 0-3 1.343-3 3h10C30 30.343 28.657 29 27 29z"></path>
+  </g>
+</svg>

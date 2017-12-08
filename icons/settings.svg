@@ -1,0 +1,7 @@
+<svg class="enlivenem" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve" data-global-elvn="enableViewport, enableClick, full, startInvisible, responsive, 0">
+  <desc>Animated with Enliven 'em Animation Engine by DeeThemes</desc>
+  <g>
+    <path fill="#8BAE5D" d="M83.987 54.877v-9.754l-9.229-2.1c-0.557-1.972-1.331-3.849-2.315-5.599l5.04-8.009 -6.898-6.897 -8.008 5.039c-1.751-0.985-3.627-1.761-5.6-2.316l-2.1-9.229h-9.754l-2.1 9.229c-1.973 0.556-3.849 1.331-5.6 2.316l-8.009-5.039 -6.897 6.897 5.04 8.009c-0.984 1.75-1.759 3.627-2.315 5.599l-9.229 2.1v9.754l9.229 2.1c0.557 1.973 1.331 3.849 2.315 5.599l-5.04 8.009 6.897 6.898 8.009-5.04c1.751 0.985 3.627 1.761 5.6 2.316l2.1 9.229h9.754l2.1-9.229c1.973-0.556 3.849-1.331 5.6-2.316l8.008 5.04 6.898-6.898 -5.04-8.009c0.984-1.75 1.759-3.626 2.315-5.599L83.987 54.877z" data-elvn="drawLines, 0, 900, #8bae5d, 1, notRandom" class="elvn-layer"></path>
+    <circle fill="#698741" cx="50" cy="50" r="17" data-elvn="drawLines, 0, 1000, #698741, 1, notRandom" class="elvn-layer"></circle>
+  </g>
+</svg>
