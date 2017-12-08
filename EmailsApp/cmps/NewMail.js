@@ -41,10 +41,11 @@ export default {
       
           </section>
           <footer class="modal-card-foot">
-            <button class="button is-success" @click="sendMail">Send mail</button>
-            <button class="button" @click="closeModal">Cancel</button>
+            <button class="button" @click="sendMail">Send <img src="https://png.icons8.com/paper-plane/color/30/000000"></button>
+            <button class="button" @click="closeModal">Cancel <img src="https://png.icons8.com/delete/nolan/30/000000"></button>
           </footer>
         </div>
+      </div>
       </div>
             
         </section>

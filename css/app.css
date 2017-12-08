@@ -1,7 +1,11 @@
-/* #map {
+body {
+    
+}
+
+#map {
     height: 400px;
     width: 400px;  
-} */
+}
 .placesList {
     height: 150px;
     background-color: lightpink;
@@ -32,17 +36,23 @@
     background-color: lightcoral;
 }
 
-.header-wrapper{
+.header-wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
+.header-wrapper img {
+    margin-left: 30px; 
+}
 .subject-wrapper{
     width: 80%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
+
+
 
 
 

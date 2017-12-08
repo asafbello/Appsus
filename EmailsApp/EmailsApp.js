@@ -10,7 +10,7 @@ export default {
         <section class="mails-homepage">
         <nav class="panel">
         <p class="panel-heading">
-          My E-mails App <img src="https://png.icons8.com/postal/dusk/69/000000"><i class="fa fa-plus-circle" aria-hidden="true" @click="openNewMail"></i>
+          My E-mails App <img src="https://png.icons8.com/postal/dusk/69/000000"><img src="https://png.icons8.com/plus/ultraviolet/30/000000" @click="openNewMail">
         </p>
         <div class="panel-block">
           <p class="control has-icons-left">

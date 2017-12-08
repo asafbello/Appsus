@@ -12,22 +12,10 @@ new Vue({
     template: `
         <section>
         <div class = "header-wrapper">
-        <router-link to="/" exact> <object data="your.svg" type="image/svg+xml" >
-        <img src="icons/home.svg"  />
-    </object></router-link> 
-
-<router-link to="/PlacesApp" exact> <object data="your.svg" type="image/svg+xml">
-      <img src="icons/location-pin.svg" />
-</object></router-link>
-
-<router-link to="/EmailsApp" exact> <object data="your.svg" type="image/svg+xml">
-      <img src="icons/mail.svg"  />
-</object></router-link>
-
-<router-link to="/MrKeeper" exact></object>
-  <object data="your.svg" type="image/svg+xml">
-  <img src="icons/pencil.svg"  />
-</object></router-link>
+    <router-link to="/" exact><img src="https://png.icons8.com/home/dusk/69/000000"></router-link>
+    <router-link to="/PlacesApp" exact><img src="https://png.icons8.com/location/office/69/000000"></router-link>
+    <router-link to="/EmailsApp" exact><img src="https://png.icons8.com/gmail/nolan/69/000000"></router-link>
+    <router-link to="/MrKeeper" exact><img src="https://png.icons8.com/edit-property/color/69/000000"></router-link>
         </div>
                 <router-view></router-view>
         </section>
