@@ -43,7 +43,7 @@ export default {
         </span>
         </div>
         </div>
-        <div :class="{ mobile: mail.isActive}" >{{mail.body}}</div>
+        <div :class="{ mobile: mail.isActive}" > <hr>{{mail.body}}</div>
         </a>
         </div>
         </nav>
