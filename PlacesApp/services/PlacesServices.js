@@ -82,37 +82,95 @@ function updatePlace(place) {
     });
 }
 
+function deletePlace(place) {
+    var placeToUpdateIdx = places.findIndex(currPlace => currPlace.id === place.id)
+    places.splice(placeToUpdateIdx, 1);
+    initMap()
+}
 
 
 
 
-
-function initMap(lat, lng) {
+function initMap(lat, lng, zoom) {
     if (!lat) lat = 31.7767189;
     if (!lng) lng = 35.2345085;
-
+    if (!zoom) zoom = 13;
+    // var infowindow = new google.maps.InfoWindow();
     var map = new google.maps.Map(
         document.getElementById('map'),
         {
             center: { lat: lat, lng: lng },
-            zoom: 13
+            zoom: zoom,
+            icon: image
         }
     );
-   
+
+    // function placeMarker( loc ) {
+    //     var latLng = new google.maps.LatLng( loc[1], loc[2]);
+    //     var marker = new google.maps.Marker({
+    //       position : latLng,
+    //       map      : map
+    //     });
+    //     google.maps.event.addListener(marker, 'click', function(){
+    //         infowindow.close(); // Close previously opened infowindow
+    //         infowindow.setContent( "<div id='infowindow'>"+ loc[0] +"</div>");
+    //         infowindow.open(map, marker);
+    //     });
+    //   }
+      
+    //   // ITERATE ALL LOCATIONS
+    //   // Don't create functions inside for loops
+    //   // therefore refer to a previously created function
+    //   // and pass your iterating location as argument value:
+    //   for(var i=0; i<locations.length; i++) {
+    //     placeMarker( locations[i] );
+    //   }
+    var contentString = `<div id="content">
+        <div id="siteNotice">
+        <h1>blabla</h1>
+        </div> 
+       </div>`;
+
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+
+    });
+    var image = {
+        //url: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png' ,
+        url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+        // This marker is 20 pixels wide by 32 pixels high.
+        size: new google.maps.Size(20, 32),
+        // The origin for this image is (0, 0).
+        origin: new google.maps.Point(0, 0),
+        // The anchor for this image is the base of the flagpole at (0, 32).
+        anchor: new google.maps.Point(0, 32)
+    };
+
     var marker, i;
 
     for (i = 0; i < places.length; i++) {
         marker = new google.maps.Marker({
             position: new google.maps.LatLng(places[i].lat, places[i].lng),
-            map: map
-
+            map: map,
+            icon: image,
+            title: places[i].name
         });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+            console.log('open')
+          });
+       
     }
-    marker = new google.maps.Marker({
-        position: new google.maps.LatLng( lat,lng ),
-        map: map
-    
-    }) 
+    // marker = new google.maps.Marker({
+    //     position: new google.maps.LatLng(lat, lng),
+    //     map: map
+
+    // })
+    // marker.addListener('click', function() {
+    //     infowindow.open(map, marker);
+    //     console.log('open')
+    //   });
 }
 // var marker = new google.maps.Marker({
 //     position: { lat: lat, lng: lng },
@@ -136,5 +194,6 @@ export default {
     hendelSerch,
     createPlace,
     getPlaces,
-    updatePlace
+    updatePlace,
+    deletePlace
 }

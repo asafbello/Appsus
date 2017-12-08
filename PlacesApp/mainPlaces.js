@@ -1,6 +1,6 @@
 
 import PlacesServices from './services/PlacesServices.js'
-import MyPlaces from './cmp/MyPlaces.js'
+import PlacesList from './cmp/PlacesList.js'
 import EditPlaces from './cmp/EditPlaces.js'
 import ShowPlace from './cmp/ShowPlace.js'
 
@@ -16,7 +16,7 @@ export default {
         </form> 
         <container class="mapSection>
              <div id="map" ></div>
-             <MyPlaces class="MyPlaces" @editPlace="editPlace"></MyPlaces>
+             <PlacesList class="PlacesList" @editPlace="editPlace"></PlacesList>
              <button @click="addPlace">add</button>
              <ShowPlace></ShowPlace>
             </container>
@@ -62,7 +62,7 @@ export default {
     },
 
     components: {
-        MyPlaces,
+        PlacesList,
         EditPlaces,
         ShowPlace
     }
