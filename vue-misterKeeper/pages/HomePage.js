@@ -18,6 +18,7 @@ export default {
                  <footer class="card-footer"> 
                     <router-link :to="'/MrKeeper/details/' + note.id + '/edit'" class="card-footer-item">Edit</router-link>
                             <a href="#" class="card-footer-item" @click.stop="deleteNote(note.id)">Delete</a>
+                             <img src="https://png.icons8.com/disposal/ultraviolet/30/000000"  class="card-footer-item">
                 </footer>
                     </div>
                 </div>

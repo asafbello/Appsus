@@ -15,6 +15,10 @@
     height: 100vh;
 }
 
+.field.is-grouped {
+    justify-content: flex-end
+}
+
 
 @media screen and (max-width: 768px) {
     .edit-from {

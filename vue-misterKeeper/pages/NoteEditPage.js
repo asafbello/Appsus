@@ -39,13 +39,13 @@ export default {
   
     <div class="field is-grouped">
         <div class="control">
-        <button class="button is-success">{{(noteId)? 'Save' : 'Add'}}</button>
-        <img src="https://png.icons8.com/save/office/30/000000">
+        <button class="ugly-btn"><img src="https://png.icons8.com/save/office/30/000000"></button>
+        
         
         </div>
         <div class="control">
-        <router-link tag="button" to="/MrKeeper" class="button is-danger">Cancel</router-link> 
-        <img src="https://png.icons8.com/delete/ultraviolet/30/000000">   
+        <router-link  to="/MrKeeper"><img src="https://png.icons8.com/undo/office/30/000000"></router-link> 
+          
         </div>
     </div>
 </form>

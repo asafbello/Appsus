@@ -5,7 +5,7 @@ export default {
     template: `
 <section v-if="note" class="noteCard">
 
-    <section class="hero is-warning">
+    <section class="hero">
         <div class="hero-body">
             <div class="container">
                 <h1 class="title">
@@ -16,8 +16,9 @@ export default {
                         {{note.txt}} <br>
                             <hr class="line7">                
                                 <p> {{convertTime(note.dateOfCreation)}}</p>
-        <router-link :to="'/MrKeeper/details/' + note.id + '/edit'" class="button is-dark edit">Edit</router-link>
-        <router-link to="/MrKeeper" exact class="button is-dark edit">Back </router-link>
+        <router-link :to="'/MrKeeper/details/' + note.id + '/edit'" class="edit"><img src="https://png.icons8.com/edit/ultraviolet/30/000000"></router-link>
+        <router-link  to="/MrKeeper"><img src="https://png.icons8.com/undo/office/30/000000" class="edit"></router-link> 
+        
                     </h2>
             </div>
         </div>
