@@ -15,7 +15,7 @@ export default {
                     <h2 class="subtitle">
                         {{note.txt}} <br>
                             <hr class="line7">                
-                                <p> {{convertTime(note.dateOfCreation)}}</p>
+                                <p> {{note.strDate}}</p>
         <router-link :to="'/MrKeeper/details/' + note.id + '/edit'" class="edit"><img src="https://png.icons8.com/edit/ultraviolet/30/000000"></router-link>
         <router-link  to="/MrKeeper"><img src="https://png.icons8.com/undo/office/30/000000" class="edit"></router-link> 
         

@@ -8,7 +8,8 @@ var notes = [
         img: null,
         color: 'red',
         priority: 'd',
-        dateOfCreation: Date.now()
+        dateOfCreation: Date.now(),
+        strDate: moment().format('MMMM Do YYYY, h:mm:ss a')
     },
     {
         id: 102,
@@ -17,7 +18,9 @@ var notes = [
         img: null,
         color: 'red',
         priority: 'c',
-        dateOfCreation: Date.now()
+        dateOfCreation: Date.now(),
+        strDate: moment().format('MMMM Do YYYY, h:mm:ss a')
+        
     },
     {
         id: 55,
@@ -26,7 +29,9 @@ var notes = [
         img: null,
         color: 'red',
         priority: 'b',
-        dateOfCreation: Date.now()
+        dateOfCreation: Date.now(),
+        strDate: moment().format('MMMM Do YYYY, h:mm:ss a')
+        
     },
     {
         id: 12,
@@ -35,7 +40,9 @@ var notes = [
         img: null,
         color: 'red',
         priority: 'a',
-        dateOfCreation: Date.now()
+        dateOfCreation: Date.now(),
+        strDate: moment().format('MMMM Do YYYY, h:mm:ss a')
+        
     },
     {
         id: 101,
@@ -44,7 +51,9 @@ var notes = [
         img: null,
         color: 'red',
         priority: 'd',
-        dateOfCreation: Date.now()
+        dateOfCreation: Date.now(),
+        strDate: moment().format('MMMM Do YYYY, h:mm:ss a')
+        
     },
     {
         id: 102,
@@ -53,7 +62,9 @@ var notes = [
         img: null,
         color: 'red',
         priority: 'c',
-        dateOfCreation: Date.now()
+        dateOfCreation: Date.now(),
+        strDate: moment().format('MMMM Do YYYY, h:mm:ss a')
+        
     },
     {
         id: 55,
@@ -62,7 +73,9 @@ var notes = [
         img: null,
         color: 'red',
         priority: 'b',
-        dateOfCreation: Date.now()
+        dateOfCreation: Date.now(),
+        strDate: moment().format('MMMM Do YYYY, h:mm:ss a')
+        
     },
     {
         id: 12,
@@ -71,7 +84,9 @@ var notes = [
         img: null,
         color: 'red',
         priority: 'a',
-        dateOfCreation: Date.now()
+        dateOfCreation: Date.now(),
+        strDate: moment().format('MMMM Do YYYY, h:mm:ss a')
+        
     }
 ]
 
@@ -101,7 +116,7 @@ function sortByDate() {
 }
 
 function emptyNote() {
-    return { title: '', txt: '', dateOfCreation: Date.now(), priority: '', color: null }
+    return { title: '', txt: '', dateOfCreation: Date.now(), priority: '', color: null, strDate: moment().format('MMMM Do YYYY, h:mm:ss a') }
 }
 
 function getColor(priority) {
