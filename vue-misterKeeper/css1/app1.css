@@ -67,5 +67,9 @@
     .main-nav {
         height: auto;
     }
+    .note-section-wrapper {
+        background-image: none;
+        background-color: #363636
+    }
 
 
