@@ -19,7 +19,7 @@ export default {
                         Keep IT!
                     </h1>
                         <h2 class="subtitle">
-                             Write it down and never foget again!
+                             Write it down and never forget again!
                         </h2>
                     <nav class="nav">
                         <router-link  to="/MrKeeper"><img src="https://png.icons8.com/undo/office/40/000000"></router-link> 

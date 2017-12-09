@@ -70,6 +70,10 @@
     .note-section-wrapper {
         background-image: none;
         background-color: #363636
+        
+    }
+    .card {
+        width: 95%;
     }
 
 
