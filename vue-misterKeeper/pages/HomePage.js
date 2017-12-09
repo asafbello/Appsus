@@ -2,7 +2,7 @@ import NoteService from '../services/NoteService.js'
 
 export default {
     template: `
-    
+ <section class="note-section-wrapper"> 
 <section class="note-section">         
     <router-link :to="'/MrKeeper/details/' + note.id" v-for="note in notes" class="notecard" :key="note.id">
         <div class="card ">
@@ -24,8 +24,8 @@ export default {
 
           </div>
             </router-link>         
-</section>
-    
+    </section>
+</section>  
     `,
     data() {
         return {

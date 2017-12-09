@@ -3,25 +3,54 @@ import NoteService from '../services/NoteService.js'
 
 export default {
     template: `
-<section>
-    <form @submit.prevent="saveNote">
-        <h3>Title</h3>
-        <input type="text" v-model="NoteToUpdate.title" autofocus> <br>
-        <h3>Content</h3>     
-        <input type="text" v-model="NoteToUpdate.txt" autofocus> <br>
-        <h3>Priority</h3>    
-            <select v-model="NoteToUpdate.priority">
-                <option value="a">important</option>
-                <option value="b">pretty important</option>
-                <option value="c">default</option>
-                <option value="d">Not important</option>
-            </select> <br>
-        <button>{{(noteId)? 'Save' : 'Add'}}</button>
-        <router-link tag="button" to="/MrKeeper">Cancel</router-link>    
-    </form>
+<section class="bg-edit-form">
 
+<form @submit.prevent="saveNote" class="edit-from">
+    <div class="field">
+    <label class="label">Note Title</label>
+    <div class="control">
+      <input class="input" type="text" placeholder="Note Title" v-model="NoteToUpdate.title" autofocus>
+    </div>
+  </div>
+  
+
+  <div class="field">
+    <label class="label">Body</label>
+    <div class="control">
+      <textarea class="textarea" placeholder="Note Details" v-model="NoteToUpdate.txt"></textarea>
+    </div>
+  </div>
 
     
+<div class="field">
+  <label class="label">Priority</label>
+  <div class="control">
+    <div class="select">
+      <select v-model="NoteToUpdate.priority">
+      <option value="a">important</option>
+      <option value="b">pretty important</option>
+      <option value="c">default</option>
+      <option value="d">Not important</option>
+      </select>
+    </div>
+  </div>
+</div>
+  
+  
+    <div class="field is-grouped">
+        <div class="control">
+        <button class="button is-success">{{(noteId)? 'Save' : 'Add'}}</button>
+        <img src="https://png.icons8.com/save/office/30/000000">
+        
+        </div>
+        <div class="control">
+        <router-link tag="button" to="/MrKeeper" class="button is-danger">Cancel</router-link> 
+        <img src="https://png.icons8.com/delete/ultraviolet/30/000000">   
+        </div>
+    </div>
+</form>
+  
+
 </section>
     
     `,
@@ -44,7 +73,6 @@ export default {
 
     methods: {
         saveNote() {
-            // this.NoteToUpdate.color = NoteService.getColor(this.NoteToUpdate.priority)
             NoteService.saveNote(this.NoteToUpdate)
                 .then(addedNote => {
                     this.$router.push('/MrKeeper')

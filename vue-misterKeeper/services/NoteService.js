@@ -131,7 +131,7 @@ function saveNote(note) {
             notes.splice(noteToUpdateIdx, 1, note);
         } else {
             note.id = _getNextId();
-            notes.push(note);
+            notes.unshift(note);
         }
 
         resolve(note)

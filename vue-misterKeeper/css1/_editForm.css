@@ -1,0 +1,28 @@
+.edit-from {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+    background: lightyellow;
+    /* margin-top: 30px; */
+}
+
+.bg-edit-form {
+    background: url("../img/board.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+@media screen and (max-width: 768px) {
+    .edit-from {
+        width: 100% !important;
+        height: 100vh;
+        margin: 0 !important;
+    }
+    .note-section-wrapper {
+        background: black !important
+    }
+}

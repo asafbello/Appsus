@@ -4,16 +4,15 @@
     flex-flow: row wrap;
     justify-content: space-around;
     height: 100%;
-    height: 100%;
-
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .notecard {
     height: 100%;
     width: 20%;
     margin: 15px;
+    margin-top: 50px;
 }
 
 .card {
@@ -26,7 +25,7 @@
 
 .content {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: space-around;
 }
 
@@ -56,6 +55,7 @@
     .content {
         flex-flow: column wrap;
     }
+
 }
 
 
@@ -64,3 +64,10 @@ hr.line7 {
     border-top: 2px solid #050000;
     border-bottom: 1px solid black;
 }
+
+.note-section-wrapper {
+    background: url("../img/board.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+

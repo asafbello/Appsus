@@ -1,4 +1,5 @@
 @import '_card.css';
+@import '_editForm.css';
 
 
 .hero {
@@ -27,14 +28,21 @@
     width: auto;
 }
 
-
-
-
-
 .nav {
     display: flex;
     justify-content: center;
 }
 
+
+.note-section-wrapper {
+    background: url("../img/board.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.note-section {
+    width: 90%;
+    margin: 0 auto;
+}
 
 
