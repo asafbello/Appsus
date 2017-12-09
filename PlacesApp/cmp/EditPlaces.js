@@ -4,8 +4,10 @@ export default {
 
     template: `
     <section class="editPlaces" >
+
+
             {{place.fullAdress}}
-          
+       
             {{place.name}}<input type="text" v-model="newPlace.name" placeholder ='enter name..' autofocus>
             {{place.description}}<input type="text" v-model="newPlace.description" placeholder = 'enter description..' >
             <input type="text" v-model="newPlace.img" placeholder='enter imag..'>

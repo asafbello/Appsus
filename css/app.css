@@ -1,39 +1,11 @@
 
-/* #map {
-    height: 400px;
-    width: 400px;  
+/* body {
+    background-image: url("img/cover.jpg");
+    background-repeat:  repeat;
 } */
-
-.placesList {
-    height: 150px;
-    background-color: lightpink;
+.homeCover {
+    display: none;
 }
-.mapSection{
-    display: flex;
-    flex-direction: row;
-}
-.placesList ul {
-    display: flex;
-    flex-direction: row;
-}
-.placesList li {
-    padding: 15px;
-    background-color: lightgreen;
-    border-left: 1px solid black ;
-}
-.editPlaces {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    background-color: gainsboro;
-    padding: 20px;
-    margin: auto;
-}
-.placeDetails {
-    padding: 15px;
-    background-color: lightcoral;
-}
-
 
 
 

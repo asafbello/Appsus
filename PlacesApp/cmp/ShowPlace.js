@@ -6,25 +6,58 @@ export default {
 
     template: `
                 <section class="placeDetails">
-            <h1>place details</h1>
-            {{placeToShow.name}} </br>
-            {{placeToShow. description}} </br>
-           <img :src="placeToShow.img"></br>
-            {{placeToShow.tag}}</br>
+
+            <div class="box">
+            <article class="media">
+              <div class="media-left">
+                <figure class="image is-256x256">
+                <img :src="placeToShow.img">
+                </figure>
+              </div>
+              <div class="media-content">
+                <div class="content">
+                  <p>
+                    <strong>{{placeToShow.name}}</strong> 
+                    <br>
+                    adress:  {{placeToShow.fullAdress}}<br> 
+                    {{placeToShow. description}} 
+                  </p>
+                </div>
+                <nav class="level is-mobile">
+                  <div class="level-left">
+                  <a class="level-item">
+                  <span class="icon is-small"><i class="fa fa-cutlery" aria-hidden="true"></i>
+                  </i></span>
+                </a>
+                   
+                  </div>
+                </nav>
+              </div>
+            </article>
+          </div>
+          
                 </section>
                 `,
     data() {
         return {
-            placeToShow: {}
+            placeToShow: PlacesServices.getCoverPlace(),
+           // active: false
         }
     },
 
     created() {
+        // this.placeToShow = getCoverPlace()
         EventBus.$on('show-details', place => {
             this.placeToShow = place
        })
     },
 
+
     methods: {
-    }
+    } 
 }
+
+// {{placeToShow.name}} </br>
+// {{placeToShow. description}} </br>
+// <img :src="placeToShow.img"></br>
+//  {{placeToShow.tag}}</br>

@@ -3,7 +3,7 @@
 var places = [
     {
         fullAdress: 'hacotel-hamaravi jerusalem ',
-        name: 'hacotel',
+        name: 'hacotel-hamaravi',
         description: 'the  holyest place in the world',
         id: '05151',
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669030/hacotel_xzk6hc.jpg",
@@ -12,13 +12,23 @@ var places = [
         tag: 'fun'
     },
     {
-        fullAdress: 'machne yehuda market',
-        name: 'sreet view',
+        fullAdress: 'jaffa street Jerusalem',
+        name: 'machne yehuda market',
         description: 'A wonderful market with all the special produce of the country and especially from the villages around Jerusalem ',
         id: '4151',
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669025/machane_edueba.jpg",
         lat: 31.764109,
         lng: 35.213664,
+        tag: 'fun'
+    },
+    {
+        fullAdress: 'old city Jerusalem',
+        name: 'Tower of David',
+        description: 'ancient citadel located near the Jaffa Gate entrance to western edge of the Old City of Jerusalem. ',
+        id: '4189',
+        img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512859058/d_oke6pg.jpg",
+        lat: 31.7763531,
+        lng: 35.228413,
         tag: 'fun'
     }
 ]
@@ -66,10 +76,12 @@ function getPlaceById(placeId) {
     return c
 }
 
+function getCoverPlace() {
+    return places[0]
+}
 
-// function deletePlace {
 
-// }
+
 
 function updatePlace(place) {
     return new Promise((resolve, reject) => {
@@ -195,5 +207,6 @@ export default {
     createPlace,
     getPlaces,
     updatePlace,
-    deletePlace
+    deletePlace,
+    getCoverPlace
 }

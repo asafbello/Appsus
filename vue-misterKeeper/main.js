@@ -17,10 +17,8 @@ export default {
                     <router-link to="/MrKeeper/note/create" class="button is-warning">Add</router-link>                    
                     <button class="button is-warning" @click="sortPrioority">Sort by priority</button>
                     <button class="button is-warning" @click="sortByDate">Sort newest</button>
-                </nav>
-                
+                </nav>         
                 <router-view></router-view>
-                
         </section>
     `,
 

@@ -1,24 +1,17 @@
 #map {
-    height: 400px;
-    width: 400px;  
+    height: 100%;
+    width: 100%;
+    /* display: none;  */
 }
-.placesList {
-    height: 150px;
-    background-color: lightpink;
-}
+
 .mapSection{
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-top: 3%;
+    
 }
-.placesList ul {
-    display: flex;
-    flex-direction: row;
-}
-.placesList li {
-    padding: 15px;
-    background-color: lightgreen;
-    border-left: 1px solid black ;
-}
+
 .editPlaces {
     display: flex;
     flex-direction: column;
@@ -26,4 +19,27 @@
     background-color: gainsboro;
     padding: 20px;
     margin: auto
+}
+.searchBar {
+    max-width: 350px;
+    margin: auto;
+}
+
+
+.mainPage {
+    width: 90%;
+    height: 48vh;
+}
+.placesList {
+    margin-left: 2%;
+    margin-right: 2%;
+}
+.editPlaces{
+    background-color: burlywood;
+}
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    background-color: cornsilk;
 }

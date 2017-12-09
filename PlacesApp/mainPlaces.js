@@ -7,20 +7,37 @@ import ShowPlace from './cmp/ShowPlace.js'
 export default {
 
     template: `
+    
         <section class ="mainPlaces">
-            <h1>my places</h1>
-            <form @submit.prevent >
-            <input type="text" v-model="searchTxt" autofocus>
-            <button @click="searchPlace">search</button>
-            {{searchTxt}}
-        </form> 
-        <container class="mapSection>
+    <div class="header">
+            <div class ="searchBar">
+            <div class="field is-grouped" >
+            <p class="control is-expanded">
+              <input class="input" type="text" v-model="searchTxt"  placeholder="Search for a place" autofocus>
+            </p>
+            <p class="control">
+              <a class="button is-info"  @click="searchPlace">
+                Search
+              </a>
+              <a class="button is-info"  @click="addPlace">
+              add
+            </a>
+            </p>
+          </div>
+          </div>
+        <img src="img/smallogo.png">
+       
+    </div>
+       
+        <container class="mapSection">
+        <div class="mainPage">
              <div id="map" ></div>
-             <PlacesList class="PlacesList" @editPlace="editPlace"></PlacesList>
-             <button @click="addPlace">add</button>
              <ShowPlace></ShowPlace>
+             </div>
+             <PlacesList class="PlacesList" @editPlace="editPlace" ></PlacesList>
             </container>
-            <EditPlaces  v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
+    
+            <EditPlaces v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
         </section>
     `,
     data() {
@@ -42,20 +59,20 @@ export default {
         addPlace() {
             // createPlace.createPlace(this.placeData),
 
-            this.placeToUpdate.fullAdress = (this.placeData.results[0].address_components[0].long_name) + ('  ') 
+            this.placeToUpdate.fullAdress = (this.placeData.results[0].address_components[0].long_name) + ('  ')
             this.placeToUpdate.id = this.placeData.results[0].place_id
             this.placeToUpdate.lat = this.placeData.results[0].geometry.location.lat;
             this.placeToUpdate.lng = this.placeData.results[0].geometry.location.lng;
             PlacesServices.createPlace(this.placeToUpdate).then(msg => this.placeToUpdate = {});
             this.placeData = {}
-            console.log('lat:', this.placeToUpdate.lat ,'lng:' ,   this.placeToUpdate.lng )
+            console.log('lat:', this.placeToUpdate.lat, 'lng:', this.placeToUpdate.lng)
         },
         editPlace(place) {
-            debugger;
+
             this.placeToEdit = place;
         }
 
-// (if(this.placeData.results[0].address_components[3].long_name));
+        // (if(this.placeData.results[0].address_components[3].long_name));
     },
     mounted() {
         PlacesServices.initMap();
@@ -67,4 +84,6 @@ export default {
         ShowPlace
     }
 }
+
+//class="PlacesList" @editPlace="editPlace"
 
