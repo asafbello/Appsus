@@ -73,7 +73,6 @@ var mails = [
         isActive: true
         
     },
-
 ]
 
 function getMails() {
@@ -81,12 +80,6 @@ function getMails() {
         setTimeout(() => { resolve(mails) }, 500)
     });
 }
-
-// function getCopyMails() {
-//     return new Promise((resolve, reject) => {
-//         setTimeout(() => { resolve(mailsCopy) }, 500)
-//     });
-// }
 
 function getmailById(mailId) {
     return new Promise((resolve, reject) => {
@@ -121,7 +114,7 @@ function sortUnread () {
 function sortRead () {
     mailsCopy = mails.filter(mail => mail.isRead)
     return Promise.resolve(mailsCopy);
- }
+}
 
  function compareByDate(a, b) {
     if (a.sentAt < b.sentAt)
@@ -143,17 +136,12 @@ function _getNextId() {
 }
 
 
-
-
-
-
 export default {
     getMails,
     getmailById,
     deleteMail,
     sortUnread,
     sortRead,
-    // getCopyMails,
     sortByDate,
     _getNextId,
     filterByTxt

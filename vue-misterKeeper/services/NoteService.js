@@ -4,6 +4,42 @@ var notes = [
     {
         id: 101,
         title: 'not important',
+        txt: 'secret pass a1secret food and ps4 game food od and ps4 game food and ps4 game food andod and ps4 game food and ps4 game food andand ps4 game food and ps4 game food and ps4 game food and ps4 game',
+        img: null,
+        color: 'red',
+        priority: 'd',
+        dateOfCreation: Date.now()
+    },
+    {
+        id: 102,
+        title: 'default',
+        txt: 'food and ps4 gamesfood and ps4 game food and ps4 game food and ps4 game food and ps4 game food and ps4 game',
+        img: null,
+        color: 'red',
+        priority: 'c',
+        dateOfCreation: Date.now()
+    },
+    {
+        id: 55,
+        title: 'pretty importantfood and ps4 game food and ps4 game',
+        txt: 'just checking',
+        img: null,
+        color: 'red',
+        priority: 'b',
+        dateOfCreation: Date.now()
+    },
+    {
+        id: 12,
+        title: 'very important',
+        txt: 'lorem bla bla bla food and ps4 game food and ps4 game food and ps4 game food and ps4 game',
+        img: null,
+        color: 'red',
+        priority: 'a',
+        dateOfCreation: Date.now()
+    },
+    {
+        id: 101,
+        title: 'not important',
         txt: 'secret pass a1secret food and ps4 game food and ps4 game food and ps4 game food and ps4 game food and ps4 game',
         img: null,
         color: 'red',

@@ -1,20 +1,11 @@
+@import '_card.css';
+
+
 .hero {
     margin: 20px;
-    /* max-width: 30%; */
     border-radius: 20px; 
 }
 
-
-
-hr.line7 {
-    border-top: 1px solid #8c8b8b;
-    border-bottom: 1px solid black;
-}
-
-.main-container {
-    background-image: url("../img/pattern.jpg");
-    
-}
 
 .edit {
     margin-top:25px;
@@ -36,20 +27,9 @@ hr.line7 {
     width: auto;
 }
 
-.red {
-    background: red;
-}
 
-.card {
-    background: lightyellow;
-    border-radius: 20px;
-    margin: 20px;
-}
 
-.note-section {
-    display: flex;
-    height: 100vw;
-}
+
 
 .nav {
     display: flex;

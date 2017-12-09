@@ -7,54 +7,50 @@ import NewMail from './cmps/NewMail.js'
 export default {
 
   template: `
-        <section class="mails-homepage">
-        <nav class="panel">
-        <p class="panel-heading">
+<section class="mails-homepage">
+  <nav class="panel">
+    <p class="panel-heading">
           My E-mails App <img src="https://png.icons8.com/postal/dusk/69/000000"><img src="https://png.icons8.com/plus/ultraviolet/30/000000" @click="openNewMail">
-        </p>
-        <div class="panel-block">
+    </p>
+      <div class="panel-block">
           <p class="control has-icons-left">
             <input class="input is-small" type="search" v-model="searchedTerm" @input="searchMail" placeholder="search">
             <span class="icon is-small is-left">
               <i class="fa fa-search"></i>
             </span>
           </p>
-        </div>
+      </div>
         <p class="panel-tabs">
           <a class="is-active" @click="sortAll">all</a>
           <a @click="sortRead">Read</a>
           <a @click="sortUnread">Unread({{unReadIndicator}})</a>
-          <a @click="sortByDate">Newest</a>
-         
+          <a @click="sortByDate">Newest</a>   
         </p>
-        <div class="panel-block-wrapper">
-        <a class="panel-block is-active"  v-for="mail in mails" :class="{boldSubject: !mail.isRead}"  @click="readMail(mail.id)">
+  <div class="panel-block-wrapper">
+    <a class="panel-block is-active"  v-for="mail in mails" :class="{boldSubject: !mail.isRead}"  @click="readMail(mail.id)">
         <div class="subject-wrapper">
-        <span class="panel">
-        {{mail.subject}}
-        </span>
-        <div class="panel-icons">
-        <i class="fa fa-envelope" aria-hidden="true" @click.stop="mail.isRead = !mail.isRead"></i>
+          <span class="panel">
+            {{mail.subject}}
+          </span>
+      <div class="panel-icons">
+          <i class="fa fa-envelope" aria-hidden="true" @click.stop="mail.isRead = !mail.isRead"></i>
         <span class="card-footer-item mail-item" @click="deleteMail(mail.id)">
-        <span class="trash">
+          <span class="trash">
             <span></span>
             <i></i>
+          </span>
         </span>
-        </span>
-        </div>
-        </div>
+      </div>
+    </div>
         <div :class="{ mobile: mail.isActive}" > <hr>{{mail.body}}</div>
-        </a>
+    </a>
         </div>
-        </nav>
-
+  </nav>
         <mailDetails :mail="selectedMail" v-if="selectedMail" class="previewMail"></mailDetails>
-        <new-mail v-if="isNewMailMode" @close="openNewMail" @sent="sendNewMail"></new-mail>
-                
-        </section>
+        <new-mail v-if="isNewMailMode" @close="openNewMail" @sent="sendNewMail"></new-mail>        
+</section>
     `,
 
-  // router: myRouter,
   data() {
     return {
       mails: [],
@@ -65,6 +61,7 @@ export default {
 
     }
   },
+
   created() {
     MailServices.getMails()
       .then(mails => {
@@ -81,6 +78,7 @@ export default {
       this.readMail(idFromParams);
     }
   },
+
   methods: {
     searchMail() {
       MailServices.filterByTxt(this.searchedTerm)
@@ -97,6 +95,7 @@ export default {
     openNewMail() {
       this.isNewMailMode = !this.isNewMailMode;
     },
+
     readMail(mailId) {
       MailServices.getmailById(mailId)
         .then(mail => {
@@ -108,7 +107,6 @@ export default {
           this.$router.push('/EmailsApp/' + mailId);
         });
     },
-
 
     deleteMail(mailId) {
       MailServices.deleteMail(mailId)

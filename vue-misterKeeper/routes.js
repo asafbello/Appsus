@@ -3,8 +3,6 @@ import NoteDetailsPage from './pages/NoteDetailsPage.js'
 import NoteEditPage from './pages/NoteEditPage.js'
 
 
-
-///// merge routs later
 const routes = [
     {
         path: '/MrKeeper',
@@ -22,9 +20,6 @@ const routes = [
         path: '/MrKeeper/details/:id/edit',
         component: NoteEditPage
     },
-     
- 
-   
 
 ];
 
