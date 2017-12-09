@@ -9,7 +9,7 @@
 }
 
 .bg-edit-form {
-    background: url("../img/board.jpg");
+    /* background: url("../img/board.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -23,10 +23,11 @@
 @media screen and (max-width: 768px) {
     .edit-from {
         width: 100% !important;
-        height: 100vh;
+        height: auto;
         margin: 0 !important;
     }
-    .note-section-wrapper {
-        background: lightblue !important;
+    .bg-edit-form {
+      height: auto;  
     }
+
 }
