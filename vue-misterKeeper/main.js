@@ -22,10 +22,10 @@ export default {
                              Write it down and never foget again!
                         </h2>
                     <nav class="nav">
-                        <router-link to="/MrKeeper" exact class="button is-warning"> Home </router-link>
-                        <router-link to="/MrKeeper/note/create" class="button is-warning">Add</router-link>                    
-                        <button class="button is-warning" @click="sortPrioority">Sort by priority</button>
-                        <button class="button is-warning" @click="sortByDate">Sort newest</button>
+                        <router-link  to="/MrKeeper"><img src="https://png.icons8.com/undo/office/40/000000"></router-link> 
+                        <router-link to="/MrKeeper/note/create"><img src="https://png.icons8.com/add/dusk/40/000000"></router-link> 
+                        <img src="https://png.icons8.com/high-priority/ultraviolet/40/000000" @click="sortPrioority">    
+                        <img src="https://png.icons8.com/ascending-sorting/ultraviolet/40/000000" @click="sortByDate">               
                     </nav>
                 </div>
             </div>

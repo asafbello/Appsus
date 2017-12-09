@@ -23,8 +23,11 @@
 @media screen and (max-width: 768px) {
     .edit-from {
         width: 100% !important;
-        height: 100vh;
+        height: auto;
         margin: 0 !important;
+    }
+    .bg-edit-form {
+      height: auto;  
     }
 
 }
