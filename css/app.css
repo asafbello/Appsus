@@ -1,10 +1,14 @@
 
-/* body {
-    background-image: url("img/cover.jpg");
-    background-repeat:  repeat;
-} */
+
 .homeCover {
-    display: none;
+    display: block;
+}
+
+.homepage-bg {
+    height: 100vh;
+    /* background-color: #363636 */
+    background-image: url("img/cover.jpg")
+    
 }
 
 
