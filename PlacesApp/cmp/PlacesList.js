@@ -29,13 +29,14 @@ export default {
             </div>
         <figure class="image is-128x128">
             <img :src="place.img">
-        </figure>
+            
+            </figure>
             </div>
             <div>
                 <img src="https://png.icons8.com/eye/ultraviolet/30/000000" @click="showDetails(place)">
                 <img src="https://png.icons8.com/edit/ultraviolet/30/000000" @click="editDetails(place)">
                 <img src="https://png.icons8.com/disposal/office/30/000000" @click="deletePlace(place)">
-        </div>
+          </div>
           
         </a>
         <div class="panel-block">

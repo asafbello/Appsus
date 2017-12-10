@@ -55,7 +55,6 @@
     color: gray;
   }
 
-<<<<<<< HEAD
 
   @media screen and (max-width: 768px) {
     .mapSection{
@@ -75,7 +74,6 @@
         align-self: flex-start;
     }
   }
-=======
   img:hover {
     cursor: pointer;
   }
@@ -88,4 +86,3 @@
 .edit-icons img {
     margin: 15px;
 }
->>>>>>> ba6f6bb7c74850f149af8687bfc2216797d059c7
