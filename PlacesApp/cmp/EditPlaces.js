@@ -34,7 +34,7 @@ export default {
         <div class="control">
         <div class="select"  v-model="newPlace.tag">
           <select>
-            <option> work</option>
+            <option>fun</option>
             <option>food</option>
             <option>sport</option>
             <option>colture</option>

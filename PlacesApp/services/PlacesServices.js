@@ -1,5 +1,5 @@
 
-
+var placesCopy = [];
 var places = [
     {
         fullAdress: 'hacotel-hamaravi jerusalem ',
@@ -9,7 +9,7 @@ var places = [
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669030/hacotel_xzk6hc.jpg",
         lat: 31.783791,
         lng: 35.2345085,
-        tag: 'parking'
+        tag: 'culture'
     },
     {
         fullAdress: 'jaffa street Jerusalem',
@@ -19,7 +19,7 @@ var places = [
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669025/machane_edueba.jpg",
         lat: 31.764109,
         lng: 35.213664,
-        tag: 'parking'
+        tag: 'food'
     },
     {
         fullAdress: 'old city Jerusalem',
@@ -29,7 +29,7 @@ var places = [
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512859058/d_oke6pg.jpg",
         lat: 31.7763531,
         lng: 35.228413,
-        tag: 'parking'
+        tag: 'culture'
     }
 ]
 
@@ -51,6 +51,16 @@ function hendelSerch(adress) {
             // setWeatherByCord(lat, lng)
             return data;
         })
+}
+
+function filterByTxt(searchedTerm) {
+    placesCopy = [];
+    places.forEach(place => {
+        if ((place.name.toLowerCase()).includes(searchedTerm)) {
+            placesCopy.push(place)
+        }
+    })
+    return Promise.resolve(placesCopy);
 }
 
 
@@ -107,7 +117,7 @@ function initMap(lat, lng, zoom) {
     if (!lat) lat = 31.7767189;
     if (!lng) lng = 35.2345085;
     if (!zoom) zoom = 13;
-    // var infowindow = new google.maps.InfoWindow();
+
     var map = new google.maps.Map(
         document.getElementById('map'),
         {
@@ -149,48 +159,26 @@ function initMap(lat, lng, zoom) {
     });
 
     var icons = {
-        parking: {
-          icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png'
+        food: {
+            icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512898847/food_h9dyxa.png'
         },
-        library: {
-          icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png'
+        fun: {
+            icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512899203/fun_nvayxo.png'
         },
-        info: {
-          icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png'
+        culture: {
+            icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512899405/cultur_tnjagm.png'
         }
-      };
+    };
 
-      places.forEach(function(feature) {
+    places.forEach(function (feature) {
         var marker = new google.maps.Marker({
-          position:  new google.maps.LatLng(lat, lng),
-          icon: icons[feature.tag].icon,
-          map: map
+            position: new google.maps.LatLng(feature.lat, feature.lng),
+            icon: icons[feature.tag].icon,
+            map: map
         });
-      });
-    // var image = {
-    //     //url: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png' ,
-    //     url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-    //     // This marker is 20 pixels wide by 32 pixels high.
-    //     size: new google.maps.Size(20, 32),
-    //     // The origin for this image is (0, 0).
-    //     origin: new google.maps.Point(0, 0),
-    //     // The anchor for this image is the base of the flagpole at (0, 32).
-    //     anchor: new google.maps.Point(0, 32)
-    // };
+    });
 
-    // var marker, i;
 
-    // for (i = 0; i < places.length; i++) {
-    //     // marker = new google.maps.Marker({
-    //     //     position: new google.maps.LatLng(places[i].lat, places[i].lng),
-    //     //     map: map,
-    //     //     icon: image,
-    //     //     title: places[i].name
-    //     // });
-    //     marker.addListener('click', function () {
-    //         infowindow.open(map, marker);
-    //         console.log('open')
-    //     });
 
     // }
     // marker = new google.maps.Marker({
@@ -216,36 +204,32 @@ function initMap(lat, lng, zoom) {
 
 //   var infowindow = new google.maps.InfoWindow();
 
+
 function getMyLocation() {
-
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function (position) {
-            console.log(position)
-            var lat = position.coords.latitude
-            var lng = position.coords.longitude
-            initMap(lat, lng)
-            // return (lat,lng)
-        })
-    }  
-
+    return new Promise((resolve, reject) => {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(({ coords }) => {
+                resolve({
+                    lat: coords.latitude,
+                    lng: coords.longitude
+                })
+            })
+        }
+    })
 }
+
+
+
 function setAdressByCord(lat, lng) {
-    
-        var prmAdress = fetch(` https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyDBa2XUIja_rS8DgY8RIUYSwbB8gu4x7M0`);
-    
-    
-        prmAdress
-            .then(function (res) {
-                return res.json();
-    
-            })
-            .then(function (data) {
-                var adress = data.results[0].formatted_address;
-                document.querySelector('.Descriptive-location').innerHTML = adress
-    
-            })
-    
-    }
+    return fetch(` https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyDBa2XUIja_rS8DgY8RIUYSwbB8gu4x7M0`)
+        .then(function (res) {
+            return res.json();
+        })
+        .then(function (data) {
+            var adress = data.results[0].formatted_address;
+            return adress
+        })
+}
 
 export default {
     places,
@@ -256,5 +240,7 @@ export default {
     updatePlace,
     deletePlace,
     getCoverPlace,
-    getMyLocation
+    getMyLocation,
+    filterByTxt,
+    setAdressByCord
 }

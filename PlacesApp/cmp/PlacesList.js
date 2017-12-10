@@ -13,7 +13,7 @@ export default {
         </p>
         <div class="panel-block">
           <p class="control has-icons-left">
-            <input class="input is-small" type="text" placeholder="search">
+            <input class="input is-small" type="text" v-model="searchedTerm" @input="searchPlace" placeholder="search">
             <span class="icon is-small is-left">
               <i class="fa fa-search"></i>
             </span>
@@ -44,6 +44,8 @@ export default {
     data() {
         return {
             places: [],
+            searchedTerm:''
+
         }
     },
     created() {
@@ -65,7 +67,14 @@ export default {
         },
         deletePlace(place) {
             PlacesServices.deletePlace(place)
-        }
+        },
+        searchPlace() {
+            console.log(this.searchedTerm)
+            PlacesServices.filterByTxt(this.searchedTerm)
+              .then(places => {
+                this.places = places
+              })
+          },
     }
 }
 
