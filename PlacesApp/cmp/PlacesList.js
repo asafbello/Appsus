@@ -7,7 +7,7 @@ export default {
 
     template: `
         <section class="placesList">
-        <nav class="panel">
+        <nav class="panel places-list-items">
         <p class="panel-heading">
         My places
         </p>
@@ -21,11 +21,11 @@ export default {
         </div>
       
         <a class="panel-block is-active" v-for="place in places" @click="showDetails(place)">
-        <div class="ditailsContant">
-           <b>adress:{{place.fullAdress}}</b> <br>
-           <div class="placeName">
-                {{place.name}} <br>
-                {{place.tag}} <br>
+        <div class="details-content">
+            <div class="placeName">
+                <b>adress:{{place.fullAdress}}</b> 
+                    {{place.name}} <hr />
+                   <p class="place-tag">{{place.tag}} </p> 
             </div>
         <figure class="image is-128x128">
             <img :src="place.img">
@@ -39,11 +39,7 @@ export default {
           </div>
           
         </a>
-        <div class="panel-block">
-          <button class="button is-link is-outlined is-fullwidth">
-            reset all filters
-          </button>
-        </div>
+       
       </nav>
       </section>
         `,

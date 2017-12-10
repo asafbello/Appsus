@@ -27,7 +27,7 @@ export default {
         </div>
        
         <div class="mapSection">
-            <div class="mainPage">
+            <div class="main-map-page">
                 <div id="map" ></div>
 
                
