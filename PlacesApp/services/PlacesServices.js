@@ -171,9 +171,10 @@ function initMap(lat, lng, zoom) {
     };
 
     places.forEach(function (feature) {
+        var iconUrl = (icons[feature.tag].icon);
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(feature.lat, feature.lng),
-            icon: icons[feature.tag].icon,
+            icon: iconUrl || icons[0].icon,
             map: map
         });
     });

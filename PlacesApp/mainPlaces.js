@@ -61,11 +61,12 @@ export default {
 
         addPlace() {
             // createPlace.createPlace(this.placeData),
-
+            console.log(this.placeData);
             this.placeToUpdate.fullAdress = (this.placeData.results[0].address_components[0].long_name) + ('  ')
             this.placeToUpdate.id = this.placeData.results[0].place_id
             this.placeToUpdate.lat = this.placeData.results[0].geometry.location.lat;
             this.placeToUpdate.lng = this.placeData.results[0].geometry.location.lng;
+            this.placeToUpdate.tag = 'food';
             PlacesServices.createPlace(this.placeToUpdate).then(msg => this.placeToUpdate = {});
             this.placeData = {}
             console.log('lat:', this.placeToUpdate.lat, 'lng:', this.placeToUpdate.lng)
@@ -79,7 +80,6 @@ export default {
            .then( loc => {
           PlacesServices.setAdressByCord(loc.lat, loc.lng)
           .then((data => {
-              console.log({data})
               this.searchTxt = data 
               this.searchPlace()
             }))
