@@ -22,11 +22,15 @@ body {
     display: flex;
 }
 
+
 @media screen and (max-width: 768px) {
     .logo {
         max-width: 100%;
         margin-top: 100px;
         display: flex;
+    }
+    .small-logo {
+        display: none;
     }
 }
 

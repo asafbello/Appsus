@@ -11,7 +11,7 @@
 
 .panel {
     margin-bottom: 0 !important;
-    width: 40%;
+    /* width: 40%; */
 }
 
 .panel-block {
@@ -93,6 +93,16 @@
     align-items: center;
     position: fixed;
 }
+
+.edit-icons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.edit-icons img {
+    margin: 15px;
+}
+
 
 @media screen and (max-width: 768px) {
 

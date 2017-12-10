@@ -53,7 +53,7 @@ export default {
             test: false,
             title: 'hhhhhhhh',
             body: 'body',
-            to: '@to:',
+            to: '@to:',            
         }
     },
     
@@ -67,6 +67,7 @@ export default {
                 subject: this.subject,
                 body: this.body,
                 isRead: false,
+                isActive: true,
                 id: MailServices._getNextId(),
                 sentAt: Date.now()
             }

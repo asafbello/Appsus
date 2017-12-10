@@ -43,9 +43,10 @@ export default {
       </div>
         
         <span>Selected: {{ tag }}</span><br>
-        <a class="button is-warning"  v-on:click="savePlaceChanges">Save Changes</a>
-        <a class="button is-success" @click="closeCmp" >Undo</a>
-    
+          <div class="edit-icons">
+          <img src="https://png.icons8.com/undo/office/30/000000" @click="closeCmp">
+          <img src="https://png.icons8.com/save/office/30/000000" @click="savePlaceChanges">
+        </div>
   </div>
   
           </section>

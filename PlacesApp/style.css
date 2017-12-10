@@ -36,6 +36,19 @@
 .header {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-around;
-    background-color: cornsilk;
+    justify-content: space-between !important;
+    background-color: hsl(0, 0%, 21%);
+    padding: 20px;
 }
+
+.input {
+    background-color: hsl(0, 0%, 21%);
+    color: white;
+    border: none;
+    border-bottom: 2px solid gray; 
+}
+
+
+.input::placeholder {
+    color: gray;
+  }
