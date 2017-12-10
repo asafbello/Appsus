@@ -25,17 +25,13 @@ export default {
                 </div>
             </div>
         </div>
-       
         <div class="mapSection">
             <div class="main-map-page">
                 <div id="map" ></div>
-
-               
-                        <ShowPlace></ShowPlace>
-                        <EditPlaces v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
-                      
-                         </div>
-                         <PlacesList class="PlacesList" @editPlace="editPlace" ></PlacesList>
+                    <ShowPlace></ShowPlace>
+                    <EditPlaces v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
+                        </div>
+                        <PlacesList class="PlacesList" @editPlace="editPlace" ></PlacesList>
         
         </div>
            
@@ -58,7 +54,6 @@ export default {
         },
 
         addPlace() {
-            // createPlace.createPlace(this.placeData),
             console.log(this.placeData);
             this.placeToUpdate.fullAdress = (this.placeData.results[0].address_components[0].long_name) + ('  ')
             this.placeToUpdate.id = this.placeData.results[0].place_id
@@ -67,7 +62,7 @@ export default {
             this.placeToUpdate.tag = 'pointer';
             PlacesServices.createPlace(this.placeToUpdate).then(msg => this.placeToUpdate = {});
             this.placeData = {}
-            console.log('lat:', this.placeToUpdate.lat, 'lng:', this.placeToUpdate.lng)
+
         },
         editPlace(place) {
 
@@ -82,13 +77,8 @@ export default {
                             this.searchPlace()
                         }))
                 })
-            //   console.log({loc})
-            //   PlacesServices.setAdressByCord(loc.lat, loc.lng)
-            // .then((data => this.searchTxt = data))
-            //     this.searchPlace()
         }
 
-        // (if(this.placeData.results[0].address_components[3].long_name));
     },
     mounted() {
         PlacesServices.initMap();
@@ -101,5 +91,4 @@ export default {
     }
 }
 
-//class="PlacesList" @editPlace="editPlace"
 

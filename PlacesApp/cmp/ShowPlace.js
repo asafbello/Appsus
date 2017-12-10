@@ -4,7 +4,7 @@ import EventBus from '../services/EventBus.js';
 
 export default {
 
-    template: `
+  template: `
                 <section class="placeDetails">
 
             <div class="box" >
@@ -40,26 +40,23 @@ export default {
           
                 </section>
                 `,
-    data() {
-        return {
-            placeToShow: PlacesServices.getCoverPlace(),
-           // active: false
-        }
-    },
+  data() {
+    return {
+      placeToShow: PlacesServices.getCoverPlace(),
+      // active: false
+    }
+  },
 
-    created() {
-        // this.placeToShow = getCoverPlace()
-        EventBus.$on('show-details', place => {
-            this.placeToShow = place
-       })
-    },
+  created() {
+    // this.placeToShow = getCoverPlace()
+    EventBus.$on('show-details', place => {
+      this.placeToShow = place
+    })
+  },
 
 
-    methods: {
-    } 
+  methods: {
+  }
 }
 
-// {{placeToShow.name}} </br>
-// {{placeToShow. description}} </br>
-// <img :src="placeToShow.img"></br>
-//  {{placeToShow.tag}}</br>
+

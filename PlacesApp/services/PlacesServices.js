@@ -47,8 +47,6 @@ function hendelSerch(adress) {
             var lat = data.results[0].geometry.location.lat;
             var lng = data.results[0].geometry.location.lng;
             initMap(lat, lng)
-            //setAdressByCord(lat, lng)
-            // setWeatherByCord(lat, lng)
             return data;
         })
 }
@@ -91,15 +89,12 @@ function getCoverPlace() {
 }
 
 
-
-
 function updatePlace(place) {
     return new Promise((resolve, reject) => {
         if (place.id) {
             var placeToUpdateIdx = places.findIndex(currPlace => currPlace.id === place.id)
             places.splice(placeToUpdateIdx, 1, place);
         }
-        // resolve(place)
 
     });
 }
@@ -125,27 +120,8 @@ function initMap(lat, lng, zoom) {
             zoom: zoom,
         }
     );
-  
-    // function placeMarker( loc ) {
-    //     var latLng = new google.maps.LatLng( loc[1], loc[2]);
-    //     var marker = new google.maps.Marker({
-    //       position : latLng,
-    //       map      : map
-    //     });
-    //     google.maps.event.addListener(marker, 'click', function(){
-    //         infowindow.close(); // Close previously opened infowindow
-    //         infowindow.setContent( "<div id='infowindow'>"+ loc[0] +"</div>");
-    //         infowindow.open(map, marker);
-    //     });
-    //   }
 
-    //   // ITERATE ALL LOCATIONS
-    //   // Don't create functions inside for loops
-    //   // therefore refer to a previously created function
-    //   // and pass your iterating location as argument value:
-    //   for(var i=0; i<locations.length; i++) {
-    //     placeMarker( locations[i] );
-    //   }
+
     var contentString = `<div id="content">
         <div id="siteNotice">
         <h1>blabla</h1>
@@ -168,11 +144,11 @@ function initMap(lat, lng, zoom) {
         culture: {
             icon: 'https://png.icons8.com/color/30/theatre-mask.png'
         },
-        sport : {
-            icon:"https://png.icons8.com/running-filled/ios7/48/000000"
+        sport: {
+            icon: "https://png.icons8.com/running-filled/ios7/48/000000"
         },
         pointer: {
-            icon:"https://png.icons8.com/map-pin/color/48/000000"
+            icon: "https://png.icons8.com/map-pin/color/48/000000"
         }
     };
 
@@ -186,47 +162,22 @@ function initMap(lat, lng, zoom) {
     places.forEach(function (feature) {
         var iconUrl = (icons[feature.tag].icon);
         var infowindow = new google.maps.InfoWindow({
-            content: feature.name +'<br>'+'  description: ' +  feature.description 
+            content: feature.name + '<br>' + '  description: ' + feature.description
         });
-        
+
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(feature.lat, feature.lng),
             icon: iconUrl || icons[0].icon,
             map: map,
             title: feature.name,
-          
+
         });
-        marker.addListener('click', function() {
+        marker.addListener('click', function () {
             infowindow.open(map, marker);
-          });
+        });
     });
 
-
-
-    // }
-    // marker = new google.maps.Marker({
-    //     position: new google.maps.LatLng(lat, lng),
-    //     map: map
-
-    // })
-    // marker.addListener('click', function() {
-    //     infowindow.open(map, marker);
-    //     console.log('open')
-    //   });
 }
-// var marker = new google.maps.Marker({
-//     position: { lat: lat, lng: lng },
-//     map: map,
-//     title: 'Hello World!'
-
-//   var map = new google.maps.Map(document.getElementById('map'), {
-//     zoom: 10,
-//     center: new google.maps.LatLng(-33.92, 151.25),
-//     mapTypeId: google.maps.MapTypeId.ROADMAP
-//   });
-
-//   var infowindow = new google.maps.InfoWindow();
-
 
 function getMyLocation() {
     return new Promise((resolve, reject) => {

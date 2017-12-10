@@ -47,11 +47,12 @@ export default {
           <img src="https://png.icons8.com/undo/office/30/000000" @click="closeCmp">
           <img src="https://png.icons8.com/save/office/30/000000" @click="savePlaceChanges">
         </div>
-  </div>
-  </article>
-  </div>
+    </div>
+    </article>
+    </div>
           </section>
             `,
+
   props: ['place'],
   data() {
     return {
@@ -71,7 +72,6 @@ export default {
     closeCmp() {
 
       this.$emit('editPlace', null);
-
     }
   }
 }

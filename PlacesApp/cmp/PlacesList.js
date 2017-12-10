@@ -79,16 +79,3 @@ export default {
           },
     }
 }
-
-
-/* <h1>my places:</h1>
-<ul>
-<li v-for="place in places">
-<button @click="showDetails(place)">show details</button> <br>
-<button @click="editDetails(place)">edit details</button> <br>
-<button @click="deletePlace(place)">delete place</button> <br>
-{{place.fullAdress}} <br>
-{{place.name}} <br>
-{{place.tag}} <br>
-</li>
-</ul> */
