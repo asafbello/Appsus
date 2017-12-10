@@ -77,6 +77,10 @@
     align-items: center;
 }
 
+.modal-div {
+    display: flex;
+    justify-content: flex-start;
+}
 
 
 
@@ -87,6 +91,9 @@
     }
     .panel {
         width: 100%;
+    }
+    .mails-homepage {
+        justify-content: flex-start;
     }
 }
 
