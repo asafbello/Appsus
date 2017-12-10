@@ -48,7 +48,7 @@
 }
 
 
-.trash i {
+/* .trash i {
 	position:relative;
 	width: 0.9px;
 	height:9px;
@@ -56,8 +56,8 @@
 	display:block;
 	margin:14px auto;
 	border-radius: 5px;
-}
-.trash i:after {
+} */
+/* .trash i:after {
 	content: '';
 	width: 0.9px;
 	height: 9px;
@@ -65,8 +65,8 @@
 	position: absolute;
 	left: -4.5px;
 	border-radius: 5px;
-}
-.trash i:before {
+} */
+/* .trash i:before {
 	content: '';
 	width: 1.8px;
 	height: 18px;
@@ -74,7 +74,7 @@
 	position: absolute;
 	right: -36px;
 	border-radius: 5px;
-}
+} */
 
 .trash:hover span {
 	transform: rotate(60deg);
