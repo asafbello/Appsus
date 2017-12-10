@@ -59,6 +59,15 @@
     background: lightyellow;
 }
 
+.note-txt {
+    color: black !important;
+}
+
+.note-txt:hover {
+    color: blue !important;
+}
+
+
 @media screen and (max-width: 768px) {
     .hero {
         width: 100%;
@@ -75,5 +84,7 @@
     .card {
         width: 95%;
     }
+}
 
+  
 

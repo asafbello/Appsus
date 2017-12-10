@@ -12,7 +12,7 @@ export default {
                     </p>
                 </router-link>
                     <div class="content">
-                    <router-link :to="'/MrKeeper/details/' + note.id">{{note.txt}}</router-link>
+                    <router-link :to="'/MrKeeper/details/' + note.id" class="note-txt">{{note.txt}}</router-link>
                         <br>
                         <footer class="card-footer"> 
                         <router-link :to="'/MrKeeper/details/' + note.id + '/edit'"><img src="https://png.icons8.com/edit/ultraviolet/30/000000" class="card-footer-item"></router-link> 
