@@ -26,7 +26,7 @@
 
 .main-map-page {
     width: 95%;
-    height: 60vh;
+    height:100vh;
     margin-right: 1%;
   
 }
@@ -83,6 +83,13 @@
     .details-content  > img {
      align-self: flex-end;
     }
+    .detailsBox{
+        display: flex;
+        flex-direction: column;
+    }
+    .media {
+        justify-content: center;
+    }
 
     .placeName {
         display: flex;
@@ -102,3 +109,4 @@
 .edit-icons img {
     margin: 15px;
 }
+

@@ -7,9 +7,10 @@ export default {
     template: `
                 <section class="placeDetails">
 
-            <div class="box">
+            <div class="box" >
             <article class="media">
               <div class="media-left">
+              <div class="detailsBox">
                 <figure class="image is-256x256">
                 <img :src="placeToShow.img">
                 </figure>
@@ -22,6 +23,7 @@ export default {
                     adress:  {{placeToShow.fullAdress}}<br> 
                     {{placeToShow. description}} 
                   </p>
+                  </div>
                 </div>
                 <nav class="level is-mobile">
                   <div class="level-left">
