@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>calculator </title>
+</head>
+
+<body>
+
+    <table>
+
+
+        <tr>
+            <td class="screen" colspan="5"></td>
+        </tr>
+        <tr>
+            <td onclick="addDigit(this)">7</td>
+            <td onclick="addDigit(this)">8</td>
+            <td onclick="addDigit(this)">9</td>
+            <td onclick="addDigit(this)">-</td>
+            <td onclick="result()" rowspan="3">=</td>
+        </tr>
+        <tr>
+            <td onclick="addDigit(this)">4</td>
+            <td onclick="addDigit(this)">5</td>
+            <td onclick="addDigit(this)">6</td>
+            <td onclick="addDigit(this)">*</td>
+
+        </tr>
+        <tr>
+            <td onclick="addDigit(this)">1</td>
+            <td onclick="addDigit(this)">2</td>
+            <td onclick="addDigit(this)">3</td>
+            <td onclick="addDigit(this)">/</td>
+
+        </tr>
+        <tr>
+            <td onclick="addDigit(this)" colspan="2">0</td>
+            <td onclick="strCompu('+')">+</td>
+            <td onclick="nullify(this)">c</td>
+        </tr>
+    </table>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

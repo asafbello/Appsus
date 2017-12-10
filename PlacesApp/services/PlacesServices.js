@@ -9,7 +9,7 @@ var places = [
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669030/hacotel_xzk6hc.jpg",
         lat: 31.783791,
         lng: 35.2345085,
-        tag: 'fun'
+        tag: '<i class="fa fa-cutlery" aria-hidden="true"></i>'
     },
     {
         fullAdress: 'jaffa street Jerusalem',
@@ -129,7 +129,7 @@ function initMap(lat, lng, zoom) {
     //         infowindow.open(map, marker);
     //     });
     //   }
-      
+
     //   // ITERATE ALL LOCATIONS
     //   // Don't create functions inside for loops
     //   // therefore refer to a previously created function
@@ -168,11 +168,11 @@ function initMap(lat, lng, zoom) {
             icon: image,
             title: places[i].name
         });
-        marker.addListener('click', function() {
+        marker.addListener('click', function () {
             infowindow.open(map, marker);
             console.log('open')
-          });
-       
+        });
+
     }
     // marker = new google.maps.Marker({
     //     position: new google.maps.LatLng(lat, lng),
@@ -197,8 +197,36 @@ function initMap(lat, lng, zoom) {
 
 //   var infowindow = new google.maps.InfoWindow();
 
+function getMyLocation() {
 
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            console.log(position)
+            var lat = position.coords.latitude
+            var lng = position.coords.longitude
+            initMap(lat, lng)
+            // return (lat,lng)
+        })
+    }  
 
+}
+function setAdressByCord(lat, lng) {
+    
+        var prmAdress = fetch(` https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=AIzaSyDBa2XUIja_rS8DgY8RIUYSwbB8gu4x7M0`);
+    
+    
+        prmAdress
+            .then(function (res) {
+                return res.json();
+    
+            })
+            .then(function (data) {
+                var adress = data.results[0].formatted_address;
+                document.querySelector('.Descriptive-location').innerHTML = adress
+    
+            })
+    
+    }
 
 export default {
     places,
@@ -208,5 +236,6 @@ export default {
     getPlaces,
     updatePlace,
     deletePlace,
-    getCoverPlace
+    getCoverPlace,
+    getMyLocation
 }

@@ -1,0 +1,19 @@
+.bigbutton {
+    margin: 100px;
+}
+
+.maintable {
+      margin: 100px;
+}
+.container {
+    background-color: cadetblue;
+}
+.header {
+   margin-top: 150px;
+   margin: auto; 
+}
+h1 {
+   text-align: center; 
+    margin-top: 50px; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
