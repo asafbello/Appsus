@@ -5,7 +5,10 @@
 }
 
 .homepage-bg {
-    background: black;
+    height: 100vh;
+    /* background-color: #363636 */
+    background-image: url("img/cover.jpg")
+    
 }
 
 

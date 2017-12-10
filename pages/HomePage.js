@@ -3,7 +3,7 @@
 export default {
     template: `
     <div class="homepage-bg">
-        <img src="img/logoBright.jpg">
+        <img src="img/logopsd.png">
     </div>
     `
 }
