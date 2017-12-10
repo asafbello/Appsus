@@ -26,7 +26,7 @@ export default {
                 <nav class="level is-mobile">
                   <div class="level-left">
                   <a class="level-item">
-                  <span class="icon is-small"><i class="fa fa-cutlery" aria-hidden="true"></i>
+                  <span class="icon is-small"></i>
                   </i></span>
                 </a>
                    

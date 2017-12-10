@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat") ;
+
+body {
+  background-color: black;
+  color:white;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.formLine {
+  margin:10px;
+  padding:10px;
+  background-color: cornflowerblue;
+}
+.modelAlart {
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.5;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.alart {
+  height: 150px;
+  width: 350px;
+  background-color: black;
+  font-family: Montserrat;
+  position: absolute;
+  z-index: 1;
+}
+.alart div {
+   font-family: Montserrat;
+   color: white;
+   font-size: 35px;
+   text-align: center; 
+
+}
+.alart button {
+    padding:15px;
+    margin: 20px;
+  }

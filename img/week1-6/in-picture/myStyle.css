@@ -1,0 +1,32 @@
+.header {
+    font-size: 20px;
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: auto;
+}
+body {
+    background-color: cadetblue;
+}
+.picture {
+    background:gray;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    margin-top: 10px;
+}
+.picture img {
+    width: 300px;
+}
+
+.opt {
+    background-color: #e7e7e7; color: black;
+    width: 500px;
+    height: 100px;
+    border-radius: 12px;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 30px;
+    text-align: center;
+    
+}

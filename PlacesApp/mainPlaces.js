@@ -22,6 +22,9 @@ export default {
               <a class="button is-info"  @click="addPlace">
               add
             </a>
+              <a class="button is-info"  @click="getMyLocation">
+              <i class="fa fa-compass" aria-hidden="true"></i>
+            </a>
             </p>
           </div>
           </div>
@@ -33,11 +36,11 @@ export default {
         <div class="mainPage">
              <div id="map" ></div>
              <ShowPlace></ShowPlace>
+             <EditPlaces v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
              </div>
              <PlacesList class="PlacesList" @editPlace="editPlace" ></PlacesList>
             </container>
-    
-            <EditPlaces v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
+           
         </section>
     `,
     data() {
@@ -70,6 +73,9 @@ export default {
         editPlace(place) {
 
             this.placeToEdit = place;
+        },
+        getMyLocation(){
+            PlacesServices.getMyLocation();
         }
 
         // (if(this.placeData.results[0].address_components[3].long_name));
