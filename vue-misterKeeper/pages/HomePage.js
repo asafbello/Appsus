@@ -15,8 +15,8 @@ export default {
                     <router-link :to="'/MrKeeper/details/' + note.id">{{note.txt}}</router-link>
                         <br>
                         <footer class="card-footer"> 
-                        <router-link :to="'/MrKeeper/details/' + note.id + '/edit'" class="card-footer-item">Edit</router-link>
-                        <button class="card-footer-item" @click.stop="deleteNote(note.id)">Delete</button>
+                        <router-link :to="'/MrKeeper/details/' + note.id + '/edit'"><img src="https://png.icons8.com/edit/ultraviolet/30/000000" class="card-footer-item"></router-link> 
+                        <img src="https://png.icons8.com/disposal/office/30/000000" class="card-footer-item" @click.stop="deleteNote(note.id)">
                     </footer>
                     </div>
             </div>
@@ -42,7 +42,6 @@ export default {
 
     methods: {
         deleteNote(noteId) {
-            debugger;
             var userAnswer = confirm('Are you sure you want to delete this note?')
             if (userAnswer) {
                 NoteService.deleteNote(noteId)
