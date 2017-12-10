@@ -6,9 +6,18 @@
 
 .homepage-bg {
     height: 100vh;
+    max-width: 100vw;
     /* background-color: #363636 */
-    background-image: url("img/cover.jpg")
-    
+    background-image: url("../img/hdcover.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* display: flex; */
+}
+
+.logo {
+    max-width: 55%;
+    margin-top: 100px;
+    display: flex;
 }
 
 
