@@ -13,7 +13,9 @@ export default {
             <div class ="searchBar">
                 <div class="field is-grouped" >
                     <p class="control is-expanded">
-                        <input class="input" type="text" v-model="searchTxt"  placeholder="Search for a place" autofocus>
+                        <form @submit="searchPlace">
+                            <input class="input" type="text" v-model="searchTxt"  placeholder="Search for a place" autofocus>
+                        </form>
                     </p>
             <p class="control">
                 <img src="https://png.icons8.com/search/color/30/000000"  @click="searchPlace">
