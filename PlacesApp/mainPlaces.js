@@ -8,37 +8,29 @@ export default {
 
     template: `
     
-        <section class ="mainPlaces">
-    <div class="header">
+    <section class ="mainPlaces">
+        <div class="header">
             <div class ="searchBar">
-            <div class="field is-grouped" >
-            <p class="control is-expanded">
-              <input class="input" type="text" v-model="searchTxt"  placeholder="Search for a place" autofocus>
-            </p>
+                <div class="field is-grouped" >
+                    <p class="control is-expanded">
+                        <input class="input" type="text" v-model="searchTxt"  placeholder="Search for a place" autofocus>
+                    </p>
             <p class="control">
-              <a class="button is-info"  @click="searchPlace">
-                Search
-              </a>
-              <a class="button is-info"  @click="addPlace">
-              add
-            </a>
-              <a class="button is-info"  @click="getMyLocation">
-              <i class="fa fa-compass" aria-hidden="true"></i>
-            </a>
+                <img src="https://png.icons8.com/search/color/30/000000"  @click="searchPlace">
+                <img src="https://png.icons8.com/plus/ultraviolet/30/000000" @click="addPlace">
+                <img src="https://png.icons8.com/marker/ultraviolet/30/000000" @click="getMyLocation">  
             </p>
-          </div>
-          </div>
-        <img src="img/smallogo.png">
-       
-    </div>
+                </div>
+            </div>
+        </div>
        
         <div class="mapSection">
-        <div class="mainPage">
-             <div id="map" ></div>
-             <ShowPlace></ShowPlace>
-             <EditPlaces v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
-             </div>
-             <PlacesList class="PlacesList" @editPlace="editPlace" ></PlacesList>
+            <div class="mainPage">
+                <div id="map" ></div>
+                    <ShowPlace></ShowPlace>
+                        <EditPlaces v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
+                </div>
+                <PlacesList class="PlacesList" @editPlace="editPlace" ></PlacesList>
             </div>
            
         </section>

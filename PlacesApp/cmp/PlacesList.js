@@ -21,16 +21,16 @@ export default {
         </div>
        
         <a class="panel-block is-active" v-for="place in places" @click="showDetails(place)">
-            {{place.fullAdress}} <br>
+           <b></b> {{place.fullAdress}}</b> <br>
             {{place.name}} <br>
             {{place.tag}} <br>
             <figure class="image is-128x128">
             <img :src="place.img">
             </figure>
             <div>
-                <button @click="showDetails(place)"><i class="fa fa-eye" aria-hidden="true"></i></button> 
-                <button @click="editDetails(place)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-                <button @click="deletePlace(place)"><i class="fa fa-trash" aria-hidden="true"></i></button> 
+                <img src="https://png.icons8.com/eye/ultraviolet/30/000000" @click="showDetails(place)">
+                <img src="https://png.icons8.com/edit/ultraviolet/30/000000" @click="editDetails(place)">
+                <img src="https://png.icons8.com/disposal/office/30/000000" @click="deletePlace(place)">
           </div>
         </a>
         <div class="panel-block">
