@@ -125,7 +125,7 @@ function initMap(lat, lng, zoom) {
             zoom: zoom,
         }
     );
-
+  
     // function placeMarker( loc ) {
     //     var latLng = new google.maps.LatLng( loc[1], loc[2]);
     //     var marker = new google.maps.Marker({
@@ -167,16 +167,38 @@ function initMap(lat, lng, zoom) {
         },
         culture: {
             icon: 'https://png.icons8.com/color/30/theatre-mask.png'
+        },
+        sport : {
+            icon:"https://png.icons8.com/running-filled/ios7/48/000000"
+        },
+        pointer: {
+            icon:"https://png.icons8.com/map-pin/color/48/000000"
         }
     };
 
+    var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(lat, lng),
+        icon: icons.pointer.icon,
+        map: map,
+        title: 'my place'
+    });
+
     places.forEach(function (feature) {
         var iconUrl = (icons[feature.tag].icon);
+        var infowindow = new google.maps.InfoWindow({
+            content: feature.name +'<br>'+'  description: ' +  feature.description 
+        });
+        
         var marker = new google.maps.Marker({
             position: new google.maps.LatLng(feature.lat, feature.lng),
             icon: iconUrl || icons[0].icon,
-            map: map
+            map: map,
+            title: feature.name,
+          
         });
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+          });
     });
 
 
