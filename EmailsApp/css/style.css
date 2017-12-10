@@ -87,7 +87,12 @@
     padding-left: 10px;
 }
 
-
+.modal-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+}
 
 @media screen and (max-width: 768px) {
 
