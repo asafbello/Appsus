@@ -9,7 +9,7 @@ var places = [
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669030/hacotel_xzk6hc.jpg",
         lat: 31.783791,
         lng: 35.2345085,
-        tag: '<i class="fa fa-cutlery" aria-hidden="true"></i>'
+        tag: 'parking'
     },
     {
         fullAdress: 'jaffa street Jerusalem',
@@ -19,7 +19,7 @@ var places = [
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512669025/machane_edueba.jpg",
         lat: 31.764109,
         lng: 35.213664,
-        tag: 'fun'
+        tag: 'parking'
     },
     {
         fullAdress: 'old city Jerusalem',
@@ -29,7 +29,7 @@ var places = [
         img: "http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512859058/d_oke6pg.jpg",
         lat: 31.7763531,
         lng: 35.228413,
-        tag: 'fun'
+        tag: 'parking'
     }
 ]
 
@@ -113,7 +113,6 @@ function initMap(lat, lng, zoom) {
         {
             center: { lat: lat, lng: lng },
             zoom: zoom,
-            icon: image
         }
     );
 
@@ -148,32 +147,52 @@ function initMap(lat, lng, zoom) {
         content: contentString
 
     });
-    var image = {
-        //url: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png' ,
-        url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-        // This marker is 20 pixels wide by 32 pixels high.
-        size: new google.maps.Size(20, 32),
-        // The origin for this image is (0, 0).
-        origin: new google.maps.Point(0, 0),
-        // The anchor for this image is the base of the flagpole at (0, 32).
-        anchor: new google.maps.Point(0, 32)
-    };
 
-    var marker, i;
+    var icons = {
+        parking: {
+          icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png'
+        },
+        library: {
+          icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png'
+        },
+        info: {
+          icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png'
+        }
+      };
 
-    for (i = 0; i < places.length; i++) {
-        marker = new google.maps.Marker({
-            position: new google.maps.LatLng(places[i].lat, places[i].lng),
-            map: map,
-            icon: image,
-            title: places[i].name
+      places.forEach(function(feature) {
+        var marker = new google.maps.Marker({
+          position:  new google.maps.LatLng(lat, lng),
+          icon: icons[feature.tag].icon,
+          map: map
         });
-        marker.addListener('click', function () {
-            infowindow.open(map, marker);
-            console.log('open')
-        });
+      });
+    // var image = {
+    //     //url: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512730948/11637-200_u6cynd.png' ,
+    //     url: 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+    //     // This marker is 20 pixels wide by 32 pixels high.
+    //     size: new google.maps.Size(20, 32),
+    //     // The origin for this image is (0, 0).
+    //     origin: new google.maps.Point(0, 0),
+    //     // The anchor for this image is the base of the flagpole at (0, 32).
+    //     anchor: new google.maps.Point(0, 32)
+    // };
 
-    }
+    // var marker, i;
+
+    // for (i = 0; i < places.length; i++) {
+    //     // marker = new google.maps.Marker({
+    //     //     position: new google.maps.LatLng(places[i].lat, places[i].lng),
+    //     //     map: map,
+    //     //     icon: image,
+    //     //     title: places[i].name
+    //     // });
+    //     marker.addListener('click', function () {
+    //         infowindow.open(map, marker);
+    //         console.log('open')
+    //     });
+
+    // }
     // marker = new google.maps.Marker({
     //     position: new google.maps.LatLng(lat, lng),
     //     map: map
