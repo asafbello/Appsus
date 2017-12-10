@@ -3,7 +3,7 @@ import MailServices from '../services/MailServices.js'
 
 export default {
     template: `
-<section >
+<section>
      <div :class="{'is-active': test}">
         <div class="modal-background"></div>
             <div class="modal-card">

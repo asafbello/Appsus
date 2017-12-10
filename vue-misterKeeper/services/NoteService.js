@@ -157,7 +157,7 @@ function deleteNote(noteId) {
     return new Promise((resolve, reject) => {
         var noteIdx = notes.findIndex(note => note.id === noteId)
         notes.splice(noteIdx, 1);
-        resolve()
+        resolve(notes);
     });
 }
 

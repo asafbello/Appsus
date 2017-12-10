@@ -10,16 +10,6 @@ const myRouter = new VueRouter({ routes: myRoutes })
 export default {
 
     template: `
-<<<<<<< HEAD
-        <section class="main-container">
-                
-                <nav class="nav">
-                    <router-link to="/MrKeeper" exact class="button is-warning"> Home </router-link>
-                    <router-link to="/MrKeeper/note/create" class="button is-warning">Add</router-link>                    
-                    <button class="button is-warning" @click="sortPrioority">Sort by priority</button>
-                    <button class="button is-warning" @click="sortByDate">Sort newest</button>
-                </nav>         
-=======
 <section class="main-container">
     <section> 
         <section class="hero is-dark main-nav">
@@ -41,7 +31,6 @@ export default {
             </div>
       </section>
             <div class="container is-fluid"></div>
->>>>>>> 419cbbd0abe959eb46ea8ee6d9ddcdc85a9dd236
                 <router-view></router-view>
         </section>
         </section>
