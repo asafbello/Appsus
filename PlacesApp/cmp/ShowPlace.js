@@ -12,7 +12,7 @@ export default {
               <div class="media-left">
               <div class="detailsBox">
                 <figure class="image is-256x256">
-                <img :src="placeToShow.img">
+                <img class="img-list" :src="placeToShow.img">
                 </figure>
               </div>
               <div class="media-content">

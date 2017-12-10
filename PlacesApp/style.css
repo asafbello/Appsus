@@ -43,6 +43,14 @@
     padding: 20px;
 }
 
+ 
+ .image > .img-list {
+    max-height: 300px;
+    width: auto;
+    display:  block;
+    margin:  0 auto;
+}
+
 .input {
     background-color: hsl(0, 0%, 21%);
     color: white;
@@ -72,12 +80,19 @@
     }
     .main-map-page {
         margin: auto;
+        height: 100%;
     }
     .details-content {
         width: 100%;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+    }
+    .editPlaces {
+      align-self: center;
+      background-color: black;
+      z-index: 1;
+      display: block;
     }
 
     .details-content  > img {
@@ -90,7 +105,9 @@
     .media {
         justify-content: center;
     }
-
+    #map {
+        height:50vh;
+    }
     .placeName {
         display: flex;
         /* flex-direction: column; */
