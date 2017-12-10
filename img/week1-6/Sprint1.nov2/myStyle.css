@@ -1,0 +1,33 @@
+h1 {
+    font-size: 60px;
+}
+
+table {
+    margin: 50px;
+    margin-left: 200px;
+}
+
+th, td {
+    width:  20px;
+    height: 20px;
+    text-align: left;
+    background-color: black;
+}
+.cell0 {
+   background-color: gray;
+}
+.cellNum {
+  background-color: cadetblue;
+}
+.cellBomb {
+    background-color: red;  
+}
+#timer {
+  background-color:white;   
+}
+#clock {
+    background-color:white; 
+}
+.mark {
+      background-color: darkorchid;  
+}

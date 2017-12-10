@@ -1,0 +1,26 @@
+
+
+table, tr, td {
+    border: 2px  solid black;
+    /* border-collapse:collapse; */
+    margin: auto;
+    margin-top: 30px;
+    box-sizing: border-box;
+    padding: 15px;
+    border-style: outset;
+ 
+
+}
+td {
+      border: 15px solid black; 
+     background-color: yellowgreen;
+        /* border: 1px solid black; */
+    outline-style: outset;
+    outline-color: yellow;
+     margin: 3px;
+  
+}
+ .screen {
+      box-sizing: border-box;
+      height: 90px;
+ }

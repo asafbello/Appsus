@@ -1,0 +1,23 @@
+.head {
+    padding: 100px;
+    background-color:powderblue;
+    text-align: center;
+     font-family: Arial Arial, Helvetica, sans-serif;
+     font-size: 20px;
+    
+    
+}
+table {
+    margin:auto;
+   
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+.cell {
+   color:cadetblue;
+   background-color: black;
+}
+
