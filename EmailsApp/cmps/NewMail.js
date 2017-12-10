@@ -5,7 +5,7 @@ export default {
     template: `
 <section>
      <div :class="{'is-active': test}">
-        <div class="modal-background"></div>
+        <div class="modal-background">
             <div class="modal-card">
                 <header class="modal-card-head">
                     <p class="modal-card-title">Send a new mail</p>
@@ -43,7 +43,7 @@ export default {
         </div>
       </div>
     </div>
-            
+    </div> 
 </section>
     `,
     data() {
