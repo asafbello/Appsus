@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue1</title>
+</head>
+<body>
+    <div id="app">
+        <input type="text" v-model="message" />
+        <p :title="msg">{{ message }}</p>
+        <h1>Welcome {{userName}}</h1>
+        <button @click="doIt()">View Details</button>
+        <div :contenteditable="shouldShow">
+            Something
+        </div>
+        <section v-if="shouldShow">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quae tempora amet quis totam, beatae assumenda soluta provident architecto nihil commodi aspernatur vero. Quaerat ratione deserunt facilis magni minima, nihil.
+            <ul>
+                <li v-for="company in companies">
+                    <h4>{{company.name}} ({{company.profit}}$)</h4>
+
+                </li>
+            </ul>
+            <button v-on:click="companies.push({name: 'Native Haavot'})">+</button>
+        </section>
+        
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

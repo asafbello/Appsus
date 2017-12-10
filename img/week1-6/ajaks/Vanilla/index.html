@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>vanila</title>
+    <div class="main"></div>
+</head>
+<body>
+    <button onclick="getData()" style="text-align:center;">Make me Wiser</button>
+
+    
+    <script>
+
+        function getData() {
+       
+            var httpRequest = new XMLHttpRequest();
+
+            httpRequest.onreadystatechange = function () {
+
+                if (httpRequest.readyState === XMLHttpRequest.DONE &&
+                    httpRequest.status === 200) {
+                    
+
+                    var res = JSON.parse(httpRequest.responseText)
+
+                    document.querySelector('.main').innerText = res.quoteText;
+                
+                } else if (httpRequest.readyState === XMLHttpRequest.DONE){
+                    console.log('Error talking to server');
+                }
+            }
+
+            httpRequest.open("GET", "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json", true);
+            httpRequest.send();
+        }
+ 
+    </script>
+</body>
+
+</html>
