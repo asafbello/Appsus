@@ -1,10 +1,11 @@
 
-/* body {
-    background-image: url("img/cover.jpg");
-    background-repeat:  repeat;
-} */
+
 .homeCover {
-    display: none;
+    display: block;
+}
+
+.homepage-bg {
+    background: black;
 }
 
 

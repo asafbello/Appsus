@@ -2,28 +2,11 @@
 
 export default {
     template: `
-    
-        <section class="note-section">
-          
-            <h1>My notes</h1>
-            
-     </section>
-    
-    `,
-    data() {
-        return {
-          
-        }
-    },
-    created() {
-
-    },
-
-    methods: {
-
-        },
-
-    }
+    <div class="homepage-bg">
+        <img src="img/logoBright.jpg">
+    </div>
+    `
+}
 
 
 

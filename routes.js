@@ -24,8 +24,7 @@ const routes = [
     {
         path: '/PlacesApp',
         component: mainPlaces
-    },
-
+    }
 
 ];
 
