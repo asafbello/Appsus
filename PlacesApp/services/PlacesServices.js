@@ -160,13 +160,13 @@ function initMap(lat, lng, zoom) {
 
     var icons = {
         food: {
-            icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512898847/food_h9dyxa.png'
+            icon: 'https://png.icons8.com/color/30/porridge.png'
         },
         fun: {
-            icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512899203/fun_nvayxo.png'
+            icon: 'https://png.icons8.com/color/24/theatre-mask.png'
         },
         culture: {
-            icon: 'http://res.cloudinary.com/dxdmd1v1z/image/upload/v1512899405/cultur_tnjagm.png'
+            icon: 'https://png.icons8.com/color/30/theatre-mask.png'
         }
     };
 
