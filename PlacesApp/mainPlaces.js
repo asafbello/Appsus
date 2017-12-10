@@ -27,11 +27,15 @@ export default {
         <div class="mapSection">
             <div class="mainPage">
                 <div id="map" ></div>
-                    <ShowPlace></ShowPlace>
+
+               
+                        <ShowPlace></ShowPlace>
                         <EditPlaces v-if="placeToEdit" :place="placeToEdit" @editPlace="editPlace"></EditPlaces>
-                </div>
-                <PlacesList class="PlacesList" @editPlace="editPlace" ></PlacesList>
-            </div>
+                      
+                         </div>
+                         <PlacesList class="PlacesList" @editPlace="editPlace" ></PlacesList>
+        
+        </div>
            
         </section>
     `,
@@ -67,19 +71,19 @@ export default {
 
             this.placeToEdit = place;
         },
-        getMyLocation(){
-           PlacesServices.getMyLocation()
-           .then( loc => {
-          PlacesServices.setAdressByCord(loc.lat, loc.lng)
-          .then((data => {
-              this.searchTxt = data 
-              this.searchPlace()
-            }))
-           })
-        //   console.log({loc})
-        //   PlacesServices.setAdressByCord(loc.lat, loc.lng)
-        // .then((data => this.searchTxt = data))
-        //     this.searchPlace()
+        getMyLocation() {
+            PlacesServices.getMyLocation()
+                .then(loc => {
+                    PlacesServices.setAdressByCord(loc.lat, loc.lng)
+                        .then((data => {
+                            this.searchTxt = data
+                            this.searchPlace()
+                        }))
+                })
+            //   console.log({loc})
+            //   PlacesServices.setAdressByCord(loc.lat, loc.lng)
+            // .then((data => this.searchTxt = data))
+            //     this.searchPlace()
         }
 
         // (if(this.placeData.results[0].address_components[3].long_name));

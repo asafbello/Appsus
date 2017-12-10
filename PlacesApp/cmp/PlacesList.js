@@ -19,19 +19,24 @@ export default {
             </span>
           </p>
         </div>
-       
+      
         <a class="panel-block is-active" v-for="place in places" @click="showDetails(place)">
-           <b></b> {{place.fullAdress}}</b> <br>
-            {{place.name}} <br>
-            {{place.tag}} <br>
-            <figure class="image is-128x128">
+        <div class="ditailsContant">
+           <b>adress:{{place.fullAdress}}</b> <br>
+           <div class="placeName">
+                {{place.name}} <br>
+                {{place.tag}} <br>
+            </div>
+        <figure class="image is-128x128">
             <img :src="place.img">
-            </figure>
+        </figure>
+            </div>
             <div>
                 <img src="https://png.icons8.com/eye/ultraviolet/30/000000" @click="showDetails(place)">
                 <img src="https://png.icons8.com/edit/ultraviolet/30/000000" @click="editDetails(place)">
                 <img src="https://png.icons8.com/disposal/office/30/000000" @click="deletePlace(place)">
-          </div>
+        </div>
+          
         </a>
         <div class="panel-block">
           <button class="button is-link is-outlined is-fullwidth">
